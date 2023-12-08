@@ -1,0 +1,65 @@
+
+/* Ubuntu Monospace font styles */
+@font-face {
+	font-family: 'Ubuntu Mono';
+	font-style: normal;
+	font-weight: 400;
+	src: url("./fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf") format('truetype');
+}
+
+@font-face {
+	font-family: 'Ubuntu Mono Bold';
+	font-style: bold;
+	font-weight: 700;
+	src: url("./fonts/Ubuntu_Mono/UbuntuMono-Bold.ttf") format('truetype');
+}
+
+@font-face {
+	font-family: 'Ubuntu Mono Italic';
+	font-style: italic;
+	font-weight: 400;
+	src: url("./fonts/Ubuntu_Mono/UbuntuMono-Italic.ttf") format('truetype');
+}
+
+@font-face {
+	font-family: 'Ubuntu Mono Bold Italic';
+	font-style: bold italic;
+	font-weight: 700;
+	src: url("./fonts/Ubuntu_Mono/UbuntuMono-BoldItalic.ttf") format('truetype');
+}
+
+/* Kanit font styles */
+@font-face {
+	font-family: 'Kanit Thin';
+	font-style: light;
+	font-weight: 100;
+	src: url("./fonts/Kanit/Kanit-Thin.ttf") format('truetype');
+}
+
+@font-face {
+	font-family: 'Kanit ExtraLight';
+	font-style: light;
+	font-weight: 200;
+	src: url("./fonts/Kanit/Kanit-ExtraLight.ttf") format('truetype');
+}
+
+@font-face {
+	font-family: 'Kanit Light';
+	font-style: light;
+	font-weight: 300;
+	src: url("./fonts/Kanit/Kanit-Light.ttf") format('truetype');
+}
+
+@font-face {
+	font-family: 'Kanit';
+	font-style: normal;
+	font-weight: 400;
+	src: url("./fonts/Kanit/Kanit-Light.ttf") format('truetype');
+}
+
+@font-face {
+	font-family: 'Kanit SemiBold';
+	font-style: bold;
+	font-weight: 600;
+	src: url("./fonts/Kanit/Kanit-SemiBold.ttf") format('truetype');
+}
