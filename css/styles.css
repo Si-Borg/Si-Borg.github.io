@@ -1,15 +1,103 @@
-/* CSS reset */
-* {
+/* Imports */
+@import url("./fonts.css");
+
+/* CSS reset and defaults */
+*,
+*::before,
+*::after {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: none;
+      color: var(--font-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+      font-family: 'Kanit SemiBold';
+}
+
+p {
+      font-family: 'Kanit ExtraLight', sans-serif;
+}
+
+/* Variables */
+
+:root {
+      --main-color: #1b1c1e;
+      --accent-color: #924b28;
+      --font-color: #ffffff;
 }
 
 /* Utility classes */
 
-
 /* Page styling */
+body {
+      background-color: var(--main-color);
+      max-width: 2160px;
+      margin: 0 auto;
+}
 
+nav {
+     display: flex;
+     justify-content: space-between;
+     place-items: center;
+}
+
+nav ul li {
+      display: inline-block;
+      list-style-type: none;
+}
+
+nav a {
+      text-decoration: none;
+      padding: 1em;
+      font-size: 1.25em;
+}
+
+header {
+      padding: 2em;
+      display: grid;
+      grid-template-columns: minmax(400px, 600px) minmax(100px, 300px);
+      justify-content: space-evenly;
+}
+
+#bio {
+      align-self: baseline;
+}
+
+nav {
+      font-family: 'Ubuntu Mono';
+}
+
+#profile {
+      place-self: center;
+      width: 85%;
+      border-radius: 1em;
+      border: 5px solid var(--accent-color);
+}
+
+/* Styles for the main content area */
+main section {
+      background-color: var(--accent-color);
+      display: grid;
+      padding: 2em;
+      margin: 2em 0;
+      grid-template-columns: 1fr .5fr;
+}
 
 /* Media Queries */
+@media (max-width: 1074px) {
 
+      * {
+            text-align: center;
+      }
+      
+      header {
+            grid-template-columns: 1fr;
+            gap: 2em;
+      }
+
+      main section {
+            grid-template-columns: 1fr;
+      }
+
+}
