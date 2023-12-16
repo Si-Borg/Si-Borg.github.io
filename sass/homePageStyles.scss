@@ -1,0 +1,53 @@
+/* Imports */
+@import url("./fonts.css");
+@import url("./styles.css");
+
+/* Page styling */
+header {
+      display: grid;
+      grid-template-columns: minmax(400px, 600px) minmax(100px, 300px);
+      -webkit-box-pack: space-evenly;
+      justify-content: space-evenly;
+}
+
+#bio {
+      align-self: baseline;
+}
+
+#profile {
+      place-self: center;
+      width: 85%;
+      border-radius: 1em;
+      border: 5px solid var(--accent-color);
+}
+
+/* Styles for the main content area */
+
+section {
+      background-color: var(--accent-color);
+      display: grid;
+      padding: 2em 0;
+      margin: 50vh 0;
+      border-radius: 10px;
+      grid-column: content;
+      font-size: 1.5em;
+}
+
+/* Media Queries */
+@media (max-width: 1074px) {
+
+      * {
+            text-align: center;
+      }
+
+      #profile {
+            grid-row: 1;
+            max-width: 300px;
+            align-self: center;
+      }
+
+      main section {
+            grid-column: full-width;
+      }
+
+}

@@ -1,0 +1,29 @@
+/* Imports */
+@import url("./styles.css");
+
+/* Page styling */
+
+/* Styles for the main content area */
+.project {
+      display: grid;
+      padding: 2em 0;
+      margin: 50vh 0;
+      grid-column: content;
+}
+
+/* Media Queries */
+@media (max-width: 1074px) {
+
+      * {
+            text-align: center;
+      }
+
+      header {
+            grid-template-columns: 1fr;
+      }
+
+      main section {
+            grid-column: full-width;
+      }
+
+}
