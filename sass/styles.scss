@@ -1,0 +1,178 @@
+/* Imports */
+@import url("./fonts.css");
+
+/* Variables */
+
+:root {
+    --main-color: #1b1c1e;
+    --accent-color: #8b4725;
+    --font-color: #ffffff;
+}
+
+/* CSS reset and defaults */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--font-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Kanit SemiBold';
+}
+
+p {
+    font-family: 'Kanit ExtraLight', sans-serif;
+}
+
+/* Animations */
+
+@keyframes fade-in {
+
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+}
+
+@-webkit-keyframes fade-in {
+
+    from {
+        -webkit-transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    to {
+        -webkit-transform: translateY(0px);
+        opacity: 1;
+    }
+
+}
+
+@keyframes revert-transform {
+
+    to {
+        transform: none;
+    }
+
+}
+
+@-webkit-keyframes revert-transform {
+
+    to {
+        -webkit-transform: none;
+    }
+
+}
+
+/* Utility classes */
+
+.fade-in {
+    animation: fade-in ease-in-out 750ms forwards;
+}
+
+.full-width {
+    grid-column: full-width;
+}
+
+.content {
+    grid-column: content;
+}
+
+.content-left {
+    grid-column: content-left;
+}
+
+.content-right {
+    grid-column: content-right;
+    text-align: right;
+}
+
+.revert-transform {
+    animation: revert-transform 1s ease forwards;
+    transition: filter 1s ease; // This was the only way I could think of to get the brightness to reset smoothly
+}
+
+/* Page styling */
+body {
+    background-color: var(--main-color);
+    max-width: 2160px;
+    margin: 0 auto;
+}
+
+nav {
+    font-family: 'Ubuntu Mono';
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    place-items: center;
+
+    ul li {
+        display: inline-block;
+        list-style-type: none;
+    }
+
+    a {
+        text-decoration: none;
+        padding: 1em;
+        font-size: 1.25em;
+    }
+}
+
+/* Styles for the main content area */
+header {    
+    padding: 2em;
+}
+
+header,
+main,
+section {
+    display: grid;
+    grid-template-columns:
+        [full-width-start] 10% [content-start] 0 [content-left-start] 1fr [content-left-end] 0 [content-right-start] 1fr [content-right-end] 0 [content-end] 10% [full-width-end];
+}
+
+header,
+section > * {
+    grid-column: content;
+}
+
+/* Media Queries */
+@media (max-width: 1074px) {
+
+    * {
+        text-align: center;
+    }
+
+    header {
+        grid-template-columns: 1fr !important;
+        padding: 1em;
+    }
+
+    header > * {
+        margin: 1em;
+    }
+
+    .full-width,
+    .content,
+    .content-left,
+    .content-right {
+        grid-column: content;
+        text-align: center;
+    }
+
+}
