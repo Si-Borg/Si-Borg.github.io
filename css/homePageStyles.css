@@ -3,7 +3,6 @@
 @import url("./styles.css");
 /* Page styling */
 header {
-  display: grid;
   grid-template-columns: minmax(400px, 600px) minmax(100px, 300px);
   -webkit-box-pack: space-evenly;
   justify-content: space-evenly;
@@ -36,12 +35,16 @@ section {
   * {
     text-align: center;
   }
+  header {
+    grid-template-columns: 1fr;
+  }
   #profile {
     grid-row: 1;
     max-width: 300px;
     align-self: center;
   }
-  main section {
+  section {
     grid-column: full-width;
+    border-radius: 0;
   }
 }
