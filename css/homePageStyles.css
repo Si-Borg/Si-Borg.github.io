@@ -16,15 +16,15 @@ header {
   place-self: center;
   width: 85%;
   border-radius: 1em;
-  border: 5px solid var(--accent-color);
+  border: 5px solid var(--copper);
 }
 
 /* Styles for the main content area */
 section {
-  background-color: var(--accent-color);
+  background-color: var(--copper);
   display: grid;
   padding: 2em 0;
-  margin: 50vh 0;
+  margin: 10em 0;
   border-radius: 10px;
   grid-column: content;
   font-size: 1.5em;

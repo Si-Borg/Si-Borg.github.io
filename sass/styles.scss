@@ -4,9 +4,10 @@
 /* Variables */
 
 :root {
-    --main-color: #1b1c1e;
-    --accent-color: #8b4725;
-    --font-color: #ffffff;
+    --dark-gray: hsl(220, 5%, 11%);
+    --copper: hsl(20, 50%, 28%);
+    --blue: hsl(233, 77%, 20%);
+    --font-color: hsl(0, 0%, 100%);
 }
 
 /* CSS reset and defaults */
@@ -108,7 +109,7 @@ p {
 
 /* Page styling */
 body {
-    background-color: var(--main-color);
+    background-color: var(--dark-gray);
     max-width: 2160px;
     margin: 0 auto;
 }
@@ -134,7 +135,7 @@ nav {
 }
 
 /* Styles for the main content area */
-header {    
+header {
     padding: 2em;
 }
 
@@ -147,7 +148,7 @@ section {
 }
 
 header,
-section > * {
+section>* {
     grid-column: content;
 }
 
@@ -162,7 +163,7 @@ section > * {
         padding: 1em;
     }
 
-    header > * {
+    header>* {
         margin: 1em;
     }
 
