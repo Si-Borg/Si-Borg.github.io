@@ -1,0 +1,147 @@
+@import url("./styles.css");
+
+/* Styles written by Silas Callahan */
+
+/* Styles for the main content of the page */
+main {
+	grid-template-columns: 0.3fr 1fr;
+}
+
+.column:first-of-type {
+	border-right: 2px solid black;
+}
+
+#hosted-links {
+	display: grid;
+	gap: 5px;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 250px));
+	-webkit-box-pack: center;
+	justify-content: center;
+	padding: 5px;
+}
+
+#hosted-links h1 {
+	grid-row: 1;
+}
+
+#hosted-links p {
+	font-size: 0.75em;
+}
+
+/* Div that holds the controls for selecting picture sets */
+#controls {
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* Picture set selector */
+#picture-sets {
+	border-radius: 0.5em;
+	margin: 5px auto;
+	max-width: 60%;
+	padding: 0.5em;
+}
+
+/* View button */
+#show-pictures {
+	background-color: white;
+	border-radius: 0.5em;
+	border-width: 1px;
+	padding: 0.5em;
+}
+
+/* Container that holds the images in a set*/
+#picture-set-container {
+	background-color: white;
+	display: -webkit-box;
+	display: flex;
+	flex-wrap: wrap;
+	height: 500px;
+	-webkit-box-pack: center;
+	justify-content: center;
+	margin: 1em 2em;
+	overflow-y: scroll;
+}
+
+/* Styles for the images and containing divs */
+#picture-set-container img {
+	height: 100%;
+	width: auto;
+}
+
+.img-box {
+	border: 2px solid var(--gray);
+	border-radius: 10px;
+	box-shadow: black 5px 5px 10px;
+	display: -webkit-inline-box;
+	display: inline-flex;
+	height: 150px;
+	-webkit-box-pack: center;
+	justify-content: center;
+	margin: 10px;
+	overflow: hidden;
+	-webkit-transition: box-shadow 250ms ease-in-out;
+	transition: box-shadow 250ms ease-in-out;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+}
+
+.img-box:hover {
+	box-shadow: black 0 3px 5px;
+}
+
+/* Styling for the dialog modal that shows the enlarged version of the picture */
+#fullscreen {
+	-webkit-box-align: center;
+	align-items: center;
+	background-color: transparent;
+	border: 0px solid transparent !important;
+	color: white;
+	font-size: 1.25em;
+	margin: auto;
+	outline-color: transparent !important;
+	text-align: center;
+}
+
+#fullscreen::-webkit-backdrop {
+	background-color: rgba(0, 0, 0, 0.75);
+}
+
+#fullscreen::backdrop {
+	background-color: rgba(0, 0, 0, 0.75);
+}
+
+#fullscreen img {
+	height: 300px;
+	width: auto;
+}
+
+/* Styles for mobile viewports */
+@media (max-width: 1074px) {
+
+	/* Styles for the main content of the page */
+	.column:first-of-type {
+		border-bottom: 2px solid black;
+		border-right: none;
+	}
+
+	/* Container that holds the images in a set*/
+	#picture-set-container {
+		margin: 0;
+	}
+
+	/* Styles for the image containing divs */
+	.img-box {
+		height: 100px;
+	}
+
+	#fullscreen h3 {
+		word-wrap: break-word;
+	}
+
+	#fullscreen img {
+		height: 200px;
+		width: auto;
+	}
+}

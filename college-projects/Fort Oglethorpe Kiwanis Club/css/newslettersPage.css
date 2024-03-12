@@ -1,0 +1,44 @@
+@import url("./styles.css");
+/* Styles written by Silas Callahan */
+
+/* Styles for the selector that add newsletters to the news-box */
+#news-year-selector {
+	border-radius: 10px;
+	font-size: 1.25em;
+	margin: 1em auto;
+	padding: 10px;
+}
+
+/* Styles for the container that holds the selected set of newsletters */
+#news-box {
+	background-color: var(--gray);
+	border-radius: 10px;
+	display: grid;
+	gap: 10px;
+	grid-template-columns: repeat(auto-fit, 110px);
+	height: 400px;
+	margin: 0 auto;
+	overflow-y: scroll;
+	padding: 1em;
+	width: 90%;
+}
+
+#news-box img {
+	width: 100%;
+}
+
+/* Hides the elements that hold the newsletters */
+.news-year {
+	display: none;
+}
+
+/* Styles for mobile viewports */
+@media (max-width: 1074px) {
+
+	/* Styles for the links to other websites */
+	#news-box {
+		-webkit-box-pack: center;
+		justify-content: center;
+	}
+
+}

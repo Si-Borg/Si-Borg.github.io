@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+    Page designed and created by Silas Callahan
+-->
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="Description" content="Check out the events we have coming up to get in on the fun!" />
+		<title>Catoosa County Saddle Club - Events</title>
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="stylesheet" href="./css/eventsPage.css" />
+		<script type="module" src="./scripts/eventsScript.js" async></script>
+	</head>
+	<body>
+		<!-- Navigation area -->
+		<nav>
+			<!-- Navigation area for small viewports -->
+			<div id="small-nav-bar">
+				<a href="index.html">CCSC</a>
+				<img id="small-nav-button" src="./media/nav-button.png" alt="Navigation menu button" />
+			</div>
+
+			<dialog id="small-nav">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="join-us.html">Join Us</a></li>
+					<li><a href="news.html">News</a></li>
+					<li><a href="events.html">Events</a></li>
+					<li><a href="pictures.html">Pictures</a></li>
+				</ul>
+
+				<button type="button" id="close-nav-button">close</button>
+			</dialog>
+
+			<!-- Navigation area for devices with large viewports -->
+			<div id="large-nav" class="flex">
+				<a id="site-name" title="Home Page" href="index.html">CCSC</a>
+
+				<ul class="flex">
+					<li><a href="join-us.html">Join Us</a></li>
+					<li><a href="news.html">News</a></li>
+					<li><a href="events.html">Events</a></li>
+					<li><a href="pictures.html">Pictures</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- Header with the page name -->
+		<header>
+			<h1>Events</h1>
+		</header>
+
+		<!-- Content area -->
+		<main>
+			<!-- Events are added to each section by JavaScript -->
+			<section id="past-events">
+				<h2>Past Events</h2>
+			</section>
+
+			<section id="current-events">
+				<h2>This Month's Upcoming Events</h2>
+			</section>
+
+			<section id="future-events">
+				<h2>Future Events</h2>
+			</section>
+		</main>
+
+		<!-- Footer area -->
+		<footer>
+			<p>Located at:</p>
+			<a href="https://maps.app.goo.gl/xUewDsZ1kkv9D6PRA">
+				State Line Arena <br />
+				4976 Keith Road Ringgold, Georgia
+			</a>
+			<p>Page designed and created by Silas Callahan</p>
+		</footer>
+	</body>
+</html>

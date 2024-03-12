@@ -1,0 +1,334 @@
+/* Unused Adobe Garamond fonts */
+/* @import url("https://use.typekit.net/ijh2hzj.css"); */
+
+/* Includes a Garamond font that is consistent with Kiwanis style but I never used on the website */
+/* Uncomment this import and remove the one below it if either of the long form fonts are used. */
+/* @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Montserrat:wght@400;700&family=Oswald:wght@500;700&display=swap"); */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&display=swap");
+/* Styles written by Silas Callahan */
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Colors and fonts used across the website */
+:root {
+	--background-color: #ffffff;
+	--black: #000000;
+	--blue: #003874;
+	--body-copy-bold: "Avenir Next LT Pro Bold", "Montserrat", "Arial Bold", sans-serif;
+	--body-copy-regular: "Avenir Next LT Pro Regular", "Montserrat", "Arial Regular", sans-serif;
+	--gold: #b49759;
+	--gray: #a9a8a9;
+	--headlines: "Knockout HTF67 FullBantamwt", "Oswald", "Haettenschweiler", sans-serif;
+	--light-blue: #99caea;
+	--long-form-italic: "Adobe Garamond Italic", "EB Garamond", "Georgia Italic", serif;
+	--long-form-regular: "Adobe Garamond", "EB Garamond", "Georgia", serif;
+	--subheads: "Knockout HTF69 FullLiteweight", "Oswald", "Haettenschweiler", sans-serif;
+}
+
+/* Animations */
+@-webkit-keyframes nav-hover-on {
+	from {
+		background-color: var(--gold);
+		box-shadow: rgba(0, 0, 0, 0.5) 7px 6px 6px;
+		color: white;
+	}
+
+	50% {
+		background-color: white;
+		color: var(--gold);
+	}
+
+	to {
+		background-color: white;
+		box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 3px;
+		color: var(--gold);
+	}
+}
+
+@-webkit-keyframes nav-hover-off {
+	from {
+		background-color: white;
+		box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 3px;
+		color: var(--gold);
+	}
+
+	50% {
+		background-color: var(--gold);
+		color: white;
+	}
+
+	to {
+		background-color: var(--gold);
+		box-shadow: rgba(0, 0, 0, 0.5) 7px 6px 6px;
+		color: white;
+	}
+}
+
+@keyframes nav-hover-on {
+	from {
+		background-color: var(--gold);
+		box-shadow: rgba(0, 0, 0, 0.5) 7px 6px 6px;
+		color: white;
+	}
+
+	50% {
+		background-color: white;
+		color: var(--gold);
+	}
+
+	to {
+		background-color: white;
+		box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 3px;
+		color: var(--gold);
+	}
+}
+
+@keyframes nav-hover-off {
+	from {
+		background-color: white;
+		box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 3px;
+		color: var(--gold);
+	}
+
+	50% {
+		background-color: var(--gold);
+		color: white;
+	}
+
+	to {
+		background-color: var(--gold);
+		box-shadow: rgba(0, 0, 0, 0.5) 7px 6px 6px;
+		color: white;
+	}
+}
+
+/* Background and content size styling for all pages */
+body {
+	background-attachment: fixed;
+	background-color: var(--background-color);
+	background-image: url("../media/graphics/background.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0 auto;
+	margin-bottom: 50px;
+	max-width: 1920px;
+	width: 90%;
+}
+
+/* Styling for the title of the Kiwanis branch at the top of every page */
+#title {
+	margin: 0 auto;
+	margin-bottom: 2em;
+	max-width: 400px;
+	padding: 1em;
+}
+
+#title a {
+	text-decoration: none;
+}
+
+#title img {
+	max-width: 100%;
+}
+
+#title h2 {
+	color: var(--gold);
+	font-family: var(--body-copy-regular);
+	font-weight: 500;
+	padding-left: 22%;
+	text-shadow: rgba(0, 0, 0, 0.25) 3px 2px 5px;
+	text-transform: none;
+}
+
+/* Styling for the navigation area */
+nav ul {
+	display: grid;
+	grid-template-columns: repeat(8, minmax(50px, 110px));
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	list-style-type: none;
+	text-align: center;
+}
+
+nav ul li a {
+	background-color: var(--gold);
+	border-radius: 1.25em;
+	box-shadow: rgba(0, 0, 0, 0.5) 7px 6px 6px;
+	color: white;
+	display: inline-block;
+	margin-bottom: 0.5em;
+	padding: 0.5em 0;
+	text-decoration: none;
+	width: 110px;
+}
+
+/* Utility class added to nav links on hover using JavaScript */
+.nav-animation {
+	-webkit-animation: nav-hover-off 500ms ease-out forwards;
+	animation: nav-hover-off 500ms ease-out forwards;
+}
+
+/* Hover effect for nav links */
+.nav-animation:hover,
+#current-page {
+	-webkit-animation: nav-hover-on 500ms ease-in forwards;
+	animation: nav-hover-on 500ms ease-in forwards;
+}
+
+/* Styling for the main content of pages */
+main {
+	background-color: var(--background-color);
+	border-radius: 0.75em 0.75em 0 0;
+	border-top: solid 0.5em var(--blue);
+	box-shadow: rgba(0, 0, 0, 0.5) 7px 6px 6px;
+	display: grid;
+	font-family: var(--body-copy-regular);
+	justify-items: center;
+	margin-top: 1em;
+	padding: 2em;
+}
+
+.column {
+	margin: 1em;
+	padding: 10px;
+	text-align: center;
+	width: 90%;
+}
+
+/* Font and text styles */
+h1 {
+	color: var(--gold);
+	font-family: var(--headlines);
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+h2 {
+	color: var(--gold);
+	font-family: var(--subheads);
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+h3 {
+	font-family: var(--subheads);
+	font-weight: 400;
+}
+
+h4 {
+	font-family: var(--subheads);
+	font-weight: 400;
+}
+
+p,
+li {
+	font-family: var(--body-copy-regular);
+}
+
+a {
+	color: var(--blue);
+}
+
+a:hover {
+	color: var(--gold);
+}
+
+/* Style rule that forces certain form element to inherit font styles */
+button,
+select {
+	font: inherit;
+}
+
+/* Styles for the footer area */
+footer {
+	background-color: white;
+	border-bottom: solid 0.5em var(--blue);
+	border-radius: 0 0 0.75em 0.75em;
+	border-top: 2px solid black;
+	box-shadow: rgba(0, 0, 0, 0.5) 7px 6px 6px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	padding: 2em;
+	place-items: center;
+	text-align: center;
+}
+
+#footer-links {
+	display: grid;
+	text-align: left;
+}
+
+footer h3 {
+	font-size: 1.5em;
+}
+
+footer p {
+	padding: 2px;
+}
+
+/* Styles for mobile viewports */
+@media (max-width: 1074px) {
+
+	body {
+		width: 100%;
+	}
+
+	/* Small navigation menu button styles */
+	#small-nav-button {
+		background-color: var(--gold);
+		background-image: url("../media/ui/nav-button.png");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 50px;
+		border-radius: 2em;
+		box-shadow: rgba(0, 0, 0, 0.5) 7px 6px 6px;
+		display: block;
+		margin: 0 auto;
+		margin-bottom: 0.5em;
+		padding: 30px;
+		width: 90%;
+	}
+
+	nav ul {
+		display: none;
+		grid-template-columns: 1fr;
+		margin: 0 auto;
+		width: 90%;
+	}
+
+	nav ul li a {
+		font-size: 1.5em;
+		width: 100%;
+	}
+
+	/* Styles for the main content of the page */
+	main {
+		grid-template-columns: 1fr !important;
+		padding: 1em 0;
+		text-align: center;
+	}
+
+	.column {
+		margin: 0;
+		width: 90%;
+	}
+
+	/* Styles for the footer area */
+	footer {
+		gap: 2em;
+		grid-template-columns: 1fr;
+	}
+
+	#footer-links {
+		text-align: center;
+	}
+}

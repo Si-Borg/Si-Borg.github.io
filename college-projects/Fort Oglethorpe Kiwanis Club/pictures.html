@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!--
+    Page designed and created by Silas Callahan
+-->
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Check out pictures from our events!">
+		<title>Fort Oglethorpe Kiwanis Club - Pictures</title>
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="stylesheet" href="./css/picturesPage.css" />
+		<script type="module" src="./js/picturesScript.js" async></script>
+	</head>
+
+	<body>
+		<!-- Kiwanis Club branch location -->
+		<div id="title">
+			<a href="./index.html">
+				<img src="./media/logos/KI_logo_GoldBlue.png" alt="Kiwanis International logo" />
+				<h2>Fort Oglethorpe, GA</h2>
+			</a>
+		</div>
+
+		<!-- Navigation area-->
+		<nav>
+			<a id="small-nav-button"></a>
+			<ul>
+				<li><a href="./index.html">Home</a></li>
+				<li><a href="./programs.html">Programs</a></li>
+				<li><a href="./events.html">Events</a></li>
+				<li><a href="./resources.html">Resources</a></li>
+				<li><a id="current-page" href="./pictures.html">Pictures</a></li>
+				<li><a href="./leadership.html">Leadership</a></li>
+				<li><a href="./newsletters.html">Newsletters</a></li>
+				<li><a href="./contact-us.html">Contact Us</a></li>
+			</ul>
+		</nav>
+
+		<!-- Main content area-->
+		<main>
+			<div class="column">
+				<!-- Links hosted through other services -->
+				<h1>Hosted Images Links</h1>
+
+				<div id="hosted-links">
+					<!-- Broken links left in case a solution is found -->
+					<p>
+						<a href="https://dwightwatt.shutterfly.com/33548">Pictures from the 34th annual Rick Honeycutt golf tournament November 2017 (full size photos available)</a>
+					</p>
+
+					<p>
+						<a href="https://dwightwatt.shutterfly.com/31122">Pictures from the Kiwanis float in the Fort Oglethorpe Christmas Parade 2016</a>
+					</p>
+
+					<p>
+						<a href="https://dwightwatt.shutterfly.com/30813">Pictures from the Rick Honeycutt golf tournament October 2016</a>
+					</p>
+
+					<p>
+						<a href="https://dwightwatt.shutterfly.com/29817">Pictures from the Rick Honeycutt golf tournament October 2015</a>
+					</p>
+
+					<p>
+						<a href="https://dwightwatt.shutterfly.com/27122">Pictures from the dinner for the 60th anniversary of the club on 6-20-2014</a>
+					</p>
+
+					<p>
+						<a href="https://dwightwatt.shutterfly.com/27061">Pictures of Distinguished Service Award banquet 5-14-2014</a>
+					</p>
+
+					<p>
+						Second annual
+						<a href="http://www.2hillandback.com">2 Hill and Back</a>
+						bike ride on September 15, 2012. Click to
+						<a href="http://dwightwatt.shutterfly.com/23555">view pictures</a>
+					</p>
+
+					<p>
+						<a href="http://dwightwatt.shutterfly.com/23501">Pictures of K-T Kiwanis Convention 2012 and election of PR Cook as Vice-Governor by Dwight Watt</a>
+					</p>
+
+					<p>
+						<a href="http://dwightwatt.shutterfly.com/22396">Pictures of Rick Honeycutt Golf Tournament 2011 by Dwight Watt</a>
+					</p>
+
+					<p>
+						<a href="http://dwightwatt.shutterfly.com/16765">Pictures of Division 3 meeting at Lee University Cleveland TN 11-16-2010 by Dwight Watt</a>
+					</p>
+
+					<p>
+						<a href="http://dwightwatt.shutterfly.com/15844">Pictures of District Convention in Clarksville TN 9-2010 by Dwight Watt</a>
+					</p>
+
+					<p>
+						<a href="http://www.photoshow.com/watch/Bi5Av6Rq">Pictures of 2009 KY-TN convention by Lynn Fant-Burke</a>
+					</p>
+
+					<p>
+						<a href="http://www.photoshow.com/watch/hH4Jv8iB">Liwanis International Convention Nashville TN 2009 by Lynn Fant-Burke</a>
+					</p>
+
+					<p>
+						<a href="http://dwightwatt.shutterfly.com/5849">Pictures of Rick Honeycutt Tournament 2008 by Dwight Watt</a>
+					</p>
+
+					<p>
+						<a href="http://photoshow.comcast.net/watch/">Pictures of Rick Honeycutt Tournament 2008 by Lynn Fant-Burke"</a>
+					</p>
+
+					<p>
+						<a href="http://dwightwatt.shutterfly.com/5523">Installation banquet 2008 by Dwight Watt</a>
+					</p>
+
+					<p>
+						<a href="http://photoshow.comcast.net/watch/Ks7Za7wc">Installation banquet 2008 by Lynn Fant-Burke</a>
+					</p>
+				</div>
+			</div>
+
+			<div class="column">
+				<h1>View Pictures</h1>
+				<!-- Selector for choosing picture set to view -->
+				<div id="controls">
+					<!-- Available picture set options are added with JavaScript  -->
+					<select id="picture-sets" title="Select a set of pictures to view">
+						<option value="-1" selected="selected">Select a picture set</option>
+					</select>
+
+					<button type="button" id="show-pictures" title="Click to view selected set">View</button>
+
+					<p>Click thumbnail for enlarged view</p>
+				</div>
+
+				<!-- Container that holds pictures when a set is selected -->
+				<div id="picture-set-container"></div>
+
+				<!-- Modal that displays and enlarge version of the image that is clicked -->
+				<dialog id="fullscreen">
+					<p>Click or tap anywhere to close</p>
+				</dialog>
+			</div>
+		</main>
+
+		<!-- Footer content area-->
+		<footer>
+			<!-- Links to helpful sites -->
+			<div class="footer-section" id="footer-links">
+				<h3>Links:</h3>
+				<p><a href="https://www.facebook.com/groups/ftoglethorpekiwanis/">Our Facebook Group</a></p>
+				<p><a href="https://locator.kiwanis.org/#.VTu1tK10xmM">Kiwanis Club Locator</a></p>
+				<p><a href="https://www.kiwanis.org/members/club-toolbox/">Membership Interest</a></p>
+				<p><a href="https://www.kiwanis.org/who-we-are/kiwanis-childrens-fund/">Childrens International Fund</a></p>
+			</div>
+
+			<!-- Copyright information -->
+			<div class="footer-section" id="copyright">
+				<p>Copyright &copy; 2008-2023</p>
+				<p>Kiwanis Club of Ft Oglethorpe, GA.</p>
+				<p>All Rights Reserved.</p>
+			</div>
+
+			<!-- Miscellaneous information -->
+			<div class="footer-section">
+				<p>Page designed and created by Silas Callahan</p>
+				<p><a href="https://unsplash.com/photos/stained-glass-installed-in-wall-yJj-x3bBSao?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash"> Background, courtesy of Daniel McCullough </a></p>
+			</div>
+		</footer>
+	</body>
+</html>

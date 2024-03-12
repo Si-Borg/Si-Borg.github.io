@@ -1,0 +1,101 @@
+@import url("./styles.css");
+/* Styles written by Silas Callahan */
+
+/* Styles for the officers section that shows the current officers image, name, and positions held */
+#officers {
+	border-bottom: 2px solid black;
+	display: grid;
+	gap: 1em 0.5em;
+	grid-template-columns: repeat(5, minmax(150px, 200px));
+	-webkit-box-pack: center;
+	justify-content: center;
+	padding-bottom: 2em;
+	width: 90%;
+}
+
+.officer {
+	text-align: center;
+}
+
+.officer h3 {
+	font-size: 1.5em;
+	font-weight: 700;
+}
+
+.officer h4 {
+	font-family: var(--body-copy-regular);
+	text-transform: none;
+}
+
+.officer img {
+	margin: 0.5em 0;
+	min-width: 100%;
+}
+
+/* Styles for the previous presidents area */
+.decade h2 {
+	text-transform: none;
+}
+
+#legend {
+	border-radius: 10px;
+	text-align: center;
+}
+
+#legend h2 {
+	margin-bottom: 10px;
+}
+
+#previous-presidents {
+	display: grid;
+	gap: 1em;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	-webkit-box-pack: center;
+	justify-content: center;
+	width: 80%;
+}
+
+#previous-presidents h2 {
+	background-color: var(--blue);
+	border-radius: 10px;
+	color: var(--gold);
+	padding: 0.25em 0;
+	text-align: center;
+}
+
+#previous-presidents h3 {
+	font-family: var(--body-copy-bold);
+	font-weight: 700;
+	padding: 0.25em 0;
+}
+
+.previous-president h3,
+.previous-president p {
+	display: inline;
+}
+
+.previous-president {
+	padding-top: 10px;
+	text-align: left;
+}
+
+.officer img {
+	border-radius: 15px 5px 15px 5px;
+	max-width: 150px;
+	min-width: 20px;
+}
+
+/* Styles for mobile viewports */
+@media (max-width: 1074px) {
+
+	/* Styles for the previous presidents area */
+	#officers {
+		grid-template-columns: repeat(2, minmax(100px, 1fr));
+	}
+
+	/* Styles for the previous presidents area */
+	#previous-presidents {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	}
+}

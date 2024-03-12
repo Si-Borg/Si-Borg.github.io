@@ -1,0 +1,36 @@
+@import url("./styles.css");
+/* Styles written by Silas Callahan */
+
+/* Styles for the main content of the page */
+main {
+	grid-template-columns: repeat(2, 1fr);
+	-webkit-box-pack: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.column img {
+	border-radius: 10px;
+	margin: 0 auto;
+	max-width: 80vw;
+	width: 400px;
+}
+
+/* Styles for the map element from Google maps */
+#google-map {
+	border: 5px solid var(--blue);
+	border-radius: 10px;
+	height: 80%;
+	width: 90%;
+}
+
+/* Styles for mobile viewports */
+@media (max-width: 1074px) {
+
+	/* Styles for the map element from Google maps */
+	#google-map {
+		height: 300px;
+		width: auto;
+	}
+	
+}

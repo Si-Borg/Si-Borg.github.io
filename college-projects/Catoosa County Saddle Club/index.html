@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--
+    Page designed and created by Silas Callahan
+-->
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="Description" content="Come see what we're up to and join in on the fun!" />
+		<title>Catoosa County Saddle Club - Home</title>
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="stylesheet" href="./css/homePage.css" />
+		<script type="module" src="./scripts/homeScript.js" async></script>
+	</head>
+	<body>
+		<!-- Navigation area -->
+		<nav>
+			<!-- Navigation area for small viewports -->
+			<div id="small-nav-bar">
+				<a href="index.html">CCSC</a>
+				<img id="small-nav-button" src="./media/nav-button.png" alt="Navigation menu button" />
+			</div>
+
+			<dialog id="small-nav">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="join-us.html">Join Us</a></li>
+					<li><a href="news.html">News</a></li>
+					<li><a href="events.html">Events</a></li>
+					<li><a href="pictures.html">Pictures</a></li>
+				</ul>
+
+				<button type="button" id="close-nav-button">close</button>
+			</dialog>
+
+			<!-- Navigation area for devices with large viewports -->
+			<div id="large-nav" class="flex">
+				<a id="site-name" title="Home Page" href="index.html">CCSC</a>
+
+				<ul class="flex">
+					<li><a href="join-us.html">Join Us</a></li>
+					<li><a href="news.html">News</a></li>
+					<li><a href="events.html">Events</a></li>
+					<li><a href="pictures.html">Pictures</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- Content area -->
+		<main>
+			<!-- Section for welcoming people to the site and telling a bit about the Catoosa County Saddle Club -->
+			<section id="welcome-area" class="flex">
+				<img src="./media/catoosahorselogo-no-letters-white.png" alt="Catoosa County Saddle Club" />
+
+				<div id="welcome-message" class="flex">
+					<h1>Welcome</h1>
+					<h2>to the Catoosa County Saddle Club</h2>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, non! Cum consectetur sint facere molestiae inventore minima, qui blanditiis earum provident numquam, iste facilis. Iste debitis dolore deleniti dicta accusamus!</p>
+					<br />
+					<h2>Gates open at 8:30am and starting time is 10:00am.</h2>
+				</div>
+			</section>
+
+			<!-- Section with address and join page link -->
+			<a href="join-us.html">
+				<section class="link-areas">
+					<h2>Join Us</h2>
+
+					<div class="content">
+						<p>Join as a member.</p>
+						<p>Check out our sponsors or apply to become one.</p>
+						<p>
+							Located at: <br />
+							State Line Arena, 4976 Keith Road Ringgold, Georgia
+						</p>
+					</div>
+				</section>
+			</a>
+
+			<!-- Shows the latest news -->
+			<a href="news.html">
+				<section class="link-areas">
+					<div id="recent-news" class="content"></div>
+
+					<h2>News</h2>
+				</section>
+			</a>
+
+			<!-- Shows the next upcoming event -->
+			<a href="events.html">
+				<section class="link-areas">
+					<h2>Events</h2>
+
+					<div id="next-event" class="content"></div>
+				</section>
+			</a>
+
+			<!-- Static links to the pictures and Facebook pages -->
+			<div id="double-grid">
+				<a href="pictures.html">
+					<section class="link-areas">
+						<h2>Pictures</h2>
+					</section>
+				</a>
+
+				<a href="https://www.facebook.com/catoosacountysaddleclub/">
+					<section class="link-areas">
+						<h2>Check us out on Facebook!</h2>
+					</section>
+				</a>
+			</div>
+
+			<!-- Footer area -->
+			<footer>
+				<p>Located at:</p>
+				<a href="https://maps.app.goo.gl/xUewDsZ1kkv9D6PRA">
+					State Line Arena <br />
+					4976 Keith Road Ringgold, Georgia
+				</a>
+				<p>Page designed and created by Silas Callahan</p>
+			</footer>
+		</main>
+	</body>
+</html>

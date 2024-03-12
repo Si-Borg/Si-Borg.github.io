@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<!--
+    Page designed and created by Silas Callahan
+-->
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            <meta name="description" content="Check out the results of the Kannonball 5k event!">
+		<title>Fort Oglethorpe Kiwanis Club - 2023 Kannonball 5k Results</title>
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+		<link rel="icon" type="image/png" href="/favicon.png" sizes="32x32"/>
+		<link rel="shortcut icon" href="/favicon.ico"/>
+		<link rel="stylesheet" href="./css/styles.css"/>
+		<script type="module" src="./js/scripts.js" async></script>
+
+            <!-- I added these styles here instead of creating another CSS file because it is not a main page -->
+            <style>
+                  main {
+                        gap: 1em;
+                        justify-items: center;
+                        overflow-x: scroll;
+                  }
+
+                  h1 {
+                        margin-bottom: 0;
+                  }
+
+                  /* Styles for the table of results */
+                  /* Moves the y-axis scrollbar to the top */
+                  #table-container,
+                  #table-container table {
+                        -webkit-transform: rotateX(180deg);
+                        transform: rotateX(180deg);
+                  }
+
+                  table {
+                        border: 2px solid black;
+                        border-collapse: collapse;
+                        text-align: left;
+                  }
+
+                  table tr th:only-child {
+                        background-color: var(--blue);
+                        color: var(--gold);
+                  }
+
+                  th,
+                  tr,
+                  td {
+                        border: 2px solid black;
+                        min-width: -webkit-fit-content;
+                        min-width: -moz-fit-content;
+                        min-width: fit-content;
+                        padding: 10px;
+                  }
+
+                  th {
+                        background-color: var(--gray);
+                        font-size: 1.25em;
+                  }
+
+                  @media (max-width: 1070px) {
+                        #table-container {
+                              border: 5px solid var(--gold);
+                              border-radius: 10px;
+                              overflow-x: scroll;
+                              width: 90%;
+                        }
+
+                        table {
+                              margin: 0 auto;
+                        }
+                  }
+            </style>
+	</head>
+	<body>
+		<!-- Kiwanis Club branch location -->
+		<div id="title">
+			<a href="./index.html">
+				<img src="./media/logos/KI_logo_GoldBlue.png" alt="Kiwanis International logo" />
+				<h2>Fort Oglethorpe, GA</h2>
+			</a>
+		</div>
+		<!-- Navigation area-->
+		<nav>
+			<a id="small-nav-button"></a>
+			<ul>
+				<li><a href="./index.html">Home</a></li>
+				<li><a href="./programs.html">Programs</a></li>
+				<li><a href="./events.html">Events</a></li>
+				<li><a href="./resources.html">Resources</a></li>
+				<li><a href="./pictures.html">Pictures</a></li>
+				<li><a href="./leadership.html">Leadership</a></li>
+				<li><a href="./newsletters.html">Newsletters</a></li>
+				<li><a href="./contact-us.html">Contact Us</a></li>
+			</ul>
+		</nav>
+		<!-- Main content area-->
+		<main>
+                  <h1>Kiwanis Kannonball Run 5K</h1>
+                  <h2>Fort Oglethorpe, GA</h2>
+                  <h3>Saturday, 09/23/2023 - 8:00 AM</h3>
+                  <h3>Chip Timing by Chattanooga Track Club</h3>
+                  <a href="./pictures.html">
+                        <h3>Pictures can be found here</h3>
+                  </a>
+                  <h2>OVERALL LISTING - 5K</h2>
+                  <!-- Results for the Kannonball 5k Run -->
+                  <div id="table-container">                        
+                        <table>
+                              <tbody>
+                                    <tr>
+                                          <th colspan="7">OVERALL FEMALE</th>
+                                    </tr>
+                                    <tr>
+                                          <th>Place</th>
+                                          <th>Name</th>
+                                          <th>Age</th>
+                                          <th>Div</th>
+                                          <th>Hometown</th>
+                                          <th>Guntime</th>
+                                          <th>Pace</th>
+                                    </tr>
+                                    <tr>
+                                          <td>1</td>
+                                          <td>Ashlyn Carlin</td>
+                                          <td>16</td>
+                                          <td>FOPEN</td>
+                                          <td>Signal Mountain, TN</td>
+                                          <td>24:24</td>
+                                          <td>7:52</td>
+                                    </tr>
+                                          <th colspan="7">OVERALL MALE</th>
+                                    <tr>
+                                          <th>Place</th>
+                                          <th>Name</th>
+                                          <th>Age</th>
+                                          <th>Div</th>
+                                          <th>Hometown</th>
+                                          <th>Guntime</th>
+                                          <th>Pace</th>
+                                    </tr>
+                                    <tr>
+                                          <td>1</td>
+                                          <td>Nicolas Tenthorey</td>
+                                          <td>36</td>
+                                          <td>MOPEN</td>
+                                          <td>Ooltewah, TN</td>
+                                          <td>20:40</td>
+                                          <td>6:39</td>
+                                    </tr>
+                                    <tr>
+                                          <th colspan="7">FEMALE MASTERS</th>
+                                    </tr>
+                                    <tr>
+                                          <th>Place</th>
+                                          <th>Name</th>
+                                          <th>Age</th>
+                                          <th>Div</th>
+                                          <th>Hometown</th>
+                                          <th>Guntime</th>
+                                          <th>Pace</th>
+                                    </tr>
+                                    <tr>
+                                          <td>1</td>
+                                          <td>April Horton</td>
+                                          <td>50</td>
+                                          <td>FMAST</td>
+                                          <td>Hixson, TN</td>
+                                          <td>27:20</td>
+                                          <td>8:48</td>
+                                    </tr>
+                                    <tr>
+                                          <th colspan="7">MALE MASTERS</th>
+                                    </tr>
+                                    <tr>
+                                          <th>Place</th>
+                                          <th>Name</th>
+                                          <th>Age</th>
+                                          <th>Div</th>
+                                          <th>Hometown</th>
+                                          <th>Guntime</th>
+                                          <th>Pace</th>
+                                    </tr>
+                                    <tr>
+                                          <td>1</td>
+                                          <td>Bryan Alexander</td>
+                                          <td>48</td>
+                                          <td>MMAST</td>
+                                          <td>Ringgold, GA</td>
+                                          <td>21:04</td>
+                                          <td>6:47</td>
+                                    </tr>
+                                    <tr>
+                                          <th colspan="7">FEMALE AGE GROUP: 14 &amp; UNDER</th>
+                                    </tr>
+                                    <tr>
+                                          <th>Place</th>
+                                          <th>Name</th>
+                                          <th>Age</th>
+                                          <th>Div</th>
+                                          <th>Hometown</th>
+                                          <th>Guntime</th>
+                                          <th>Pace</th>
+                                    </tr>
+                                    <tr>
+                                          <td>1</td>
+                                          <td>Kirklynn Bethune</td>
+                                          <td>10</td>
+                                          <td>F14UN</td>
+                                          <td>Chickamauga, GA</td>
+                                          <td>26:56</td>
+                                          <td>8:41</td>
+                                    </tr>
+                                    <tr>
+                                          <td>2</td>
+                                          <td>Chas Edwards</td>
+                                          <td>12</td>
+                                          <td>F14UN</td>
+                                          <td>Ft Oglethorpe, GA</td>
+                                          <td>30:31</td>
+                                          <td>9:50</td>
+                                    </tr>
+                                    <tr>
+                                          <th colspan="7">MALE AGE GROUP: 14 &amp; UNDER</td>
+                                    </tr>
+                                    <tr>
+                                          <th>Place</th>
+                                          <th>Name</th>
+                                          <th>Age</th>
+                                          <th>Div</th>
+                                          <th>Hometown</th>
+                                          <th>Guntime</th>
+                                          <th>Pace</th>
+                                    </tr>
+                                    <tr>
+                                          <td>1</td>
+                                          <td>Iain Price</td>
+                                          <td>12</td>
+                                          <td>M14UN</td>
+                                          <td>Ft Oglethorpe, GA</td>
+                                          <td>30:00</td>
+                                          <td>9:40</td>
+                                    </tr>
+                                    <tr>
+                                          <th colspan="7">FEMALE AGE GROUP: 15 - 19</th>
+                                    </tr>
+                                    <tr>
+                                          <th>Place</th>
+                                          <th>Name</th>
+                                          <th>Age</th>
+                                          <th>Div</th>
+                                          <th>Hometown</th>
+                                          <th>Guntime</th>
+                                          <th>Pace</th>
+                                    </tr>
+                                    <tr>
+                                          <td>N/A</td>
+                                          <td>N/A</td>
+                                          <td>N/A</td>
+                                          <td>N/A</td>
+                                          <td>N/A</td>
+                                          <td>N/A</td>
+                                          <td>N/A</td>
+                                    </tr>
+                                    <tr>
+                                          <th colspan="7">MALE AGE GROUP: 15 - 19</th>
+                                    </tr>
+                                    <tr>
+                                          <th>Place</th>
+                                          <th>Name</th>
+                                          <th>Age</th>
+                                          <th>Div</th>
+                                          <th>Hometown</th>
+                                          <th>Guntime</th>
+                                          <th>Pace</th>
+                                    </tr>
+                                    <tr>
+                                          <td>N/A</td>
+                                          <td>N/A</td>
+                                          <td>N/A</td>
+                                          <td>N/A</td>
+                                          <td>N/A</td>
+                                          <td>N/A</td>
+                                          <td>N/A</td>
+                                    </tr>
+                                    <tr>
+                                          <th colspan="7">FEMALE AGE GROUP: 20 - 29</th>
+                                    </tr>
+                                    <tr>
+                                          <th>Place</th>
+                                          <th>Name</th>
+                                          <th>Age</th>
+                                          <th>Div</th>
+                                          <th>Hometown</th>
+                                          <th>Guntime</th>
+                                          <th>Pace</th>
+                                    </tr>
+                                    <tr>
+                                          <td>1</td>
+                                          <td>Chase Klinedinst</td>
+                                          <td>26</td>
+                                          <td>F2029</td>
+                                          <td>Chattanooga, TN</td>
+                                          <td>25:52</td>
+                                          <td>8:20</td>
+                                    </tr>
+                                    <tr>
+                                          <td>2</td>
+                                          <td>Karah Powell</td>
+                                          <td>24</td>
+                                          <td>F2029</td>
+                                          <td>Soddy Daisy, TN</td>
+                                          <td>31:36</td>
+                                          <td>10:11</td>
+                                    </tr>
+                                    <tr>
+                                          <th colspan="7">MALE AGE GROUP: 20 - 29</th>
+                                    </tr>
+                                    <tr>
+                                          <th>Place</th>
+                                          <th>Name</th>
+                                          <th>Age</th>
+                                          <th>Div</th>
+                                          <th>Hometown</th>
+                                          <th>Guntime</th>
+                                          <th>Pace</th>
+                                    </tr>
+                                    <tr>
+                                          <td>1</td>
+                                          <td>John Sadler III</td>
+                                          <td>25</td>
+                                          <td>M2029</td>
+                                          <td>Chattanooga, TN</td>
+                                          <td>20:46</td>
+                                          <td>6:41</td>
+                                    </tr>
+                                    <tr>
+                                          <td>2</td>
+                                          <td>Andrew Lockhart</td>
+                                          <td>26</td>
+                                          <td>M2029</td>
+                                          <td>Philadelphia, PA</td>
+                                          <td>31:27</td>
+                                          <td>10:08</td>
+                                    </tr>
+                                    <tr>
+                                          <th colspan="7">FEMALE AGE GROUP: 30 - 39</th>
+                                    </tr>
+                                    <tr>
+                                          <th>Place</th>
+                                          <th>Name</th>
+                                          <th>Age</th>
+                                          <th>Div</th>
+                                          <th>Hometown</th>
+                                          <th>Guntime</th>
+                                          <th>Pace</th>
+                                    </tr>
+                                    <tr>
+                                          <td>N/A</td>
+                                          <td>N/A</td>
+                                          <td>N/A</td>
+                                          <td>N/A</td>
+                                          <td>N/A</td>
+                                          <td>N/A</td>
+                                          <td>N/A</td>
+                                    </tr>
+                                    <tr>
+                                          <th colspan="7">MALE AGE GROUP: 30 - 39</th>
+                                    </tr>
+                                    <tr>
+                                          <th>Place</th>
+                                          <th>Name</th>
+                                          <th>Age</th>
+                                          <th>Div</th>
+                                          <th>Hometown</th>
+                                          <th>Guntime</th>
+                                          <th>Pace</th>
+                                    </tr>
+                                    <tr>
+                                          <td>1</td>
+                                          <td>Emile Smith</td>
+                                          <td>37</td>
+                                          <td>M3039</td>
+                                          <td>Chattanooga, TN</td>
+                                          <td>21:06</td>
+                                          <td>6:48</td>
+                                    </tr>
+                                    <tr>
+                                          <td>2</td>
+                                          <td>Tian Ross</td>
+                                          <td>37</td>
+                                          <td>M3039</td>
+                                          <td>Chattanooga, TN</td>
+                                          <td>24:56</td>
+                                          <td>8:02</td>
+                                    </tr>
+                                    <tr>
+                                          <th colspan="7">FEMALE AGE GROUP: 40 - 49</th>
+                                    </tr>
+                                    <tr>
+                                          <th>Place</th>
+                                          <th>Name</th>
+                                          <th>Age</th>
+                                          <th>Div</th>
+                                          <th>Hometown</th>
+                                          <th>Guntime</th>
+                                          <th>Pace</th>
+                                    </tr>
+                                    <tr>
+                                          <td>1</td>
+                                          <td>Debbie Powell</td>
+                                          <td>42</td>
+                                          <td>F4049</td>
+                                          <td>Soddy Daisy, TN</td>
+                                          <td>31:37</td>
+                                          <td>10:11</td>
+                                    </tr>
+                                    <tr>
+                                          <td>2</td>
+                                          <td>Summer Cox</td>
+                                          <td>44</td>
+                                          <td>F4049</td>
+                                          <td>Chattanooga, TN</td>
+                                          <td>35:12</td>
+                                          <td>11:20</td>
+                                    </tr>
+                                    <tr>
+                                          <th colspan="7">MALE AGE GROUP: 40 - 49</th>
+                                    </tr>
+                                    <tr>
+                                          <th>Place</th>
+                                          <th>Name</th>
+                                          <th>Age</th>
+                                          <th>Div</th>
+                                          <th>Hometown</th>
+                                          <th>Guntime</th>
+                                          <th>Pace</th>
+                                    </tr>
+                                    <tr>
+                                          <td>1</td>
+                                          <td>Jim Coltrin</td>
+                                          <td>46</td>
+                                          <td>M4049</td>
+                                          <td>Chattanooga, TN</td>
+                                          <td>25:18</td>
+                                          <td>8:09</td>
+                                    </tr>
+                                    <tr>
+                                          <td>2</td>
+                                          <td>James Hobbs</td>
+                                          <td>40</td>
+                                          <td>M4049</td>
+                                          <td>Chattanooga, TN</td>
+                                          <td>32:35</td>
+                                          <td>10:30</td>
+                                    </tr>
+                                    <tr>
+                                          <td>3</td>
+                                          <td>Jeff Thomison</td>
+                                          <td>44</td>
+                                          <td>M4049</td>
+                                          <td>Chattanooga, TN</td>
+                                          <td>32:39</td>
+                                          <td>10:31</td>
+                                    </tr>
+                                    <tr>
+                                          <th colspan="7">FEMALE AGE GROUP: 50 - 59</th>
+                                    </tr>
+                                    <tr>
+                                          <th>Place</th>
+                                          <th>Name</th>
+                                          <th>Age</th>
+                                          <th>Div</th>
+                                          <th>Hometown</th>
+                                          <th>Guntime</th>
+                                          <th>Pace</th>
+                                    </tr>
+                                    <tr>
+                                          <td>1</td>
+                                          <td>Dani Atchley</td>
+                                          <td>55</td>
+                                          <td>F5059</td>
+                                          <td>Chickamauga, GA</td>
+                                          <td>39:53</td>
+                                          <td>12:51</td>
+                                    </tr>
+                                    <tr>
+                                          <th colspan="7">MALE AGE GROUP: 50 - 59</th>
+                                    </tr>
+                                    <tr>
+                                          <th>Place</th>
+                                          <th>Name</th>
+                                          <th>Age</th>
+                                          <th>Div</th>
+                                          <th>Hometown</th>
+                                          <th>Guntime</th>
+                                          <th>Pace</th>
+                                    </tr>
+                                    <tr>
+                                          <td>1</td>
+                                          <td>David Moghani</td>
+                                          <td>56</td>
+                                          <td>M5059</td>
+                                          <td>Scottsboro, AL</td>
+                                          <td>22:09</td>
+                                          <td>7:08</td>
+                                    </tr>
+                                    <tr>
+                                          <td>2</td>
+                                          <td>Brian Horton</td>
+                                          <td>55</td>
+                                          <td>M5059</td>
+                                          <td>Hixson, TN</td>
+                                          <td>25:59</td>
+                                          <td>8:22</td>
+                                    </tr>
+                                    <tr>
+                                          <th colspan="7">FEMALE AGE GROUP: 60 - 69</th>
+                                    </tr>
+                                    <tr>
+                                          <th>Place</th>
+                                          <th>Name</th>
+                                          <th>Age</th>
+                                          <th>Div</th>
+                                          <th>Hometown</th>
+                                          <th>Guntime</th>
+                                          <th>Pace</th>
+                                    </tr>
+                                    <tr>
+                                          <td>1</td>
+                                          <td>Patti Silvers</td>
+                                          <td>61</td>
+                                          <td>F6069</td>
+                                          <td>Chattanooga, TN</td>
+                                          <td>33:58</td>
+                                          <td>10:56</td>
+                                    </tr>
+                                    <tr>
+                                          <td>2</td>
+                                          <td>Lea Ann O'Brien</td>
+                                          <td>69</td>
+                                          <td>F6069</td>
+                                          <td>Ringgold, GA</td>
+                                          <td>39:50</td>
+                                          <td>12:50</td>
+                                    </tr>
+                                    <tr>
+                                          <td>3</td>
+                                          <td>Janice Stapp</td>
+                                          <td>61</td>
+                                          <td>F6069</td>
+                                          <td>Ringgold, GA</td>
+                                          <td>46:53</td>
+                                          <td>15:06</td>
+                                    </tr>
+                                    <tr>
+                                          <th colspan="7">MALE AGE GROUP: 60 - 69</th>
+                                    </tr>
+                                    <tr>
+                                          <th>Place</th>
+                                          <th>Name</th>
+                                          <th>Age</th>
+                                          <th>Div</th>
+                                          <th>Hometown</th>
+                                          <th>Guntime</th>
+                                          <th>Pace</th>
+                                    </tr>
+                                    <tr>
+                                          <td>1</td>
+                                          <td>Arthur Gontarek</td>
+                                          <td>67</td>
+                                          <td>M6069</td>
+                                          <td>Harrison, TN</td>
+                                          <td>26:24</td>
+                                          <td>8:30</td>
+                                    </tr>
+                                    <tr>
+                                          <td>2</td>
+                                          <td>Jerry Lockhart</td>
+                                          <td>60</td>
+                                          <td>M6069</td>
+                                          <td>Ringgold, GA</td>
+                                          <td>32:06</td>
+                                          <td>10:20</td>
+                                    </tr>
+                                    <tr>
+                                          <td>3</td>
+                                          <td>Philip Kearny</td>
+                                          <td>66</td>
+                                          <td>M6069</td>
+                                          <td>Chickamauga, GA</td>
+                                          <td>35:00</td>
+                                          <td>11:16</td>
+                                    </tr>
+                                    <tr>
+                                          <th colspan="7">FEMALE AGE GROUP: 70 &amp; OVER</th>
+                                    </tr>
+                                    <tr>
+                                          <th>Place</th>
+                                          <th>Name</th>
+                                          <th>Age</th>
+                                          <th>Div</th>
+                                          <th>Hometown</th>
+                                          <th>Guntime</th>
+                                          <th>Pace</th>
+                                    </tr>
+                                    <tr>
+                                          <td>N/A</td>
+                                          <td>N/A</td>
+                                          <td>N/A</td>
+                                          <td>N/A</td>
+                                          <td>N/A</td>
+                                          <td>N/A</td>
+                                          <td>N/A</td>
+                                    </tr>
+                                    <tr>
+                                          <th colspan="7">MALE AGE GROUP: 70 &amp; OVER</th>
+                                    </tr>
+                                    <tr>
+                                          <th>Place</th>
+                                          <th>Name</th>
+                                          <th>Age</th>
+                                          <th>Div</th>
+                                          <th>Hometown</th>
+                                          <th>Guntime</th>
+                                          <th>Pace</th>
+                                    </tr>
+                                    <tr>
+                                          <td>1</td>
+                                          <td>John Crawley</td>
+                                          <td>71</td>
+                                          <td>M70OV</td>
+                                          <td>Chattanooga, TN</td>
+                                          <td>26:39</td>
+                                          <td>8:35</td>
+                                    </tr>
+                              </tbody>
+                        </table>
+                  </div>
+		</main>
+		<!-- Footer content area-->
+		<footer>
+			<!-- Links to helpful sites -->
+			<div class="footer-section" id="footer-links">
+				<h3>Links:</h3>
+				<p><a href="https://www.facebook.com/groups/ftoglethorpekiwanis/">Our Facebook Group</a></p>
+				<p><a href="https://locator.kiwanis.org/#.VTu1tK10xmM">Kiwanis Club Locator</a></p>
+				<p><a href="https://www.kiwanis.org/members/club-toolbox/">Membership Interest</a></p>
+				<p><a href="https://www.kiwanis.org/who-we-are/kiwanis-childrens-fund/">Childrens International Fund</a></p>
+			</div>
+
+			<!-- Copyright information -->
+			<div class="footer-section" id="copyright">
+				<p>Copyright &copy; 2008-2023</p>
+				<p>Kiwanis Club of Ft Oglethorpe, GA.</p>
+				<p>All Rights Reserved.</p>
+			</div>
+
+			<!-- Miscellaneous information -->
+			<div class="footer-section">
+				<p>Page designed and created by Silas Callahan</p>
+				<p><a href="https://unsplash.com/photos/stained-glass-installed-in-wall-yJj-x3bBSao?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash"> Background, courtesy of Daniel McCullough </a></p>
+			</div>
+		</footer>
+	</body>
+</html>

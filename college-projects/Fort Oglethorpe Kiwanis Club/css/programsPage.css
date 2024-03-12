@@ -1,0 +1,49 @@
+@import url("./styles.css");
+/* Styles written by Silas Callahan */
+
+/* Styles for the main content of the page */
+main {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.column {
+	border: none;
+	padding: 3em;
+	padding-top: 1em;
+	text-align: center;
+}
+
+.column:nth-child(3n-1) {
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+}
+
+.column h1 {
+	font-size: 1.75em;
+	padding-bottom: 0.5em;
+}
+
+/* Styles for mobile viewports */
+@media (max-width: 1074px) {
+
+	/* Styles for the main content of the page */
+	main {
+		gap: 0;
+		justify-items: center;
+	}
+
+	.column:nth-child(1) {
+		border-top: none;
+	}
+
+	.column:nth-child(3n-1) {
+		border-left: none;
+		border-right: none;
+	}
+
+	.column {
+		border-top: 2px solid black;
+		padding: 2.5em;
+		width: 90%;
+	}
+}

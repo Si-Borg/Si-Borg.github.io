@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--
+    Page designed and created by Silas Callahan
+-->
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="Description" content="Check out the pictures from our events!" />
+		<title>Catoosa County Saddle Club - Pictures</title>
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="stylesheet" href="./css/picturesPage.css" />
+		<script type="module" src="./scripts/picturesScript.js" async></script>
+	</head>
+	<body>
+		<!-- Navigation area -->
+		<nav>
+			<!-- Navigation area for small viewports -->
+			<div id="small-nav-bar">
+				<a href="index.html">CCSC</a>
+				<img id="small-nav-button" src="./media/nav-button.png" alt="Navigation menu button" />
+			</div>
+
+			<dialog id="small-nav">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="join-us.html">Join Us</a></li>
+					<li><a href="news.html">News</a></li>
+					<li><a href="events.html">Events</a></li>
+					<li><a href="pictures.html">Pictures</a></li>
+				</ul>
+
+				<button type="button" id="close-nav-button">close</button>
+			</dialog>
+
+			<!-- Navigation area for devices with large viewports -->
+			<div id="large-nav" class="flex">
+				<a id="site-name" title="Home Page" href="index.html">CCSC</a>
+
+				<ul class="flex">
+					<li><a href="join-us.html">Join Us</a></li>
+					<li><a href="news.html">News</a></li>
+					<li><a href="events.html">Events</a></li>
+					<li><a href="pictures.html">Pictures</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- Header with the page name -->
+		<header>
+			<h1>Pictures</h1>
+		</header>
+
+		<!-- Content area -->
+		<main>
+			<!-- Available picture set options are added with JavaScript  -->
+			<!-- Picture set selector -->
+			<select id="picture-sets" title="Select a set of pictures to view">
+				<option value="-1" selected="selected">Select a picture set</option>
+			</select>
+			<button type="button" id="show-pictures" title="Click to view selected set">View</button>
+
+			<p>Click thumbnail for enlarged view</p>
+
+			<!-- Container for pictures to be displayed in -->
+			<div id="picture-set-container"></div>
+
+			<p>Contact Dwight Watt at <a href="mailto:dwight@dwightwatt.com">dwight@dwightwatt.com</a> to request the high resolution version of any images you find here.</p>
+			<!-- Modal that shows an enlarged version of an image on click -->
+			<dialog id="fullscreen">
+				<p>Click or tap anywhere to close</p>
+			</dialog>
+		</main>
+
+		<!-- Footer area -->
+		<footer>
+			<p>Located at:</p>
+			<a href="https://maps.app.goo.gl/xUewDsZ1kkv9D6PRA">
+				State Line Arena <br />
+				4976 Keith Road Ringgold, Georgia
+			</a>
+			<p>Page designed and created by Silas Callahan</p>
+		</footer>
+	</body>
+</html>

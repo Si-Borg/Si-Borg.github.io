@@ -1,0 +1,194 @@
+@import url("./styles.css");
+
+/* Styles written by Silas Callahan */
+body {
+	background-image: none;
+}
+
+/* Style rules for content areas */
+main {
+	display: block;
+	padding: 0;
+	width: auto;
+}
+
+/* Styles for the welcome area at the top of the page */
+#welcome-area {
+	background-image: url(../media/trail-background.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: white;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	flex-direction: column;
+	height: -webkit-fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
+	padding: 1.5em;
+}
+
+#welcome-area img {
+	height: 300px;
+	margin: 0 auto;
+	width: auto;
+}
+
+#welcome-message {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	flex-direction: column;
+	font-size: 1rem;
+	justify-items: center;
+	padding: 4em 2em;
+	text-align: center;
+}
+
+#welcome-message h1 {
+	font-size: 4em;
+}
+
+#welcome-message h2 {
+	font-family: "Signika Negative", sans-serif;
+	font-size: 2em;
+	padding-bottom: 1.5em;
+}
+
+#welcome-message p {
+	font-size: 1.25em;
+	margin: 0 auto;
+	width: 70%;
+}
+
+/* Styles for the links sections to other pages */
+.link-areas {
+	-webkit-box-align: center;
+	align-items: center;
+	border-radius: 1em;
+	color: #000000;
+	display: -webkit-box;
+	display: flex;
+	font-size: 1.25em;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	margin: 1em;
+	text-align: center;
+	-webkit-transition: box-shadow 750ms ease-in-out;
+	transition: box-shadow 750ms ease-in-out;
+}
+
+.link-areas:hover {
+	box-shadow: var(--additional-accent-color) 0 0 0 10px;
+}
+
+.link-areas h2 {
+	font-family: "Lobster", sans-serif;
+	font-size: 2em;
+	padding: 2em;
+}
+
+.link-areas h2:nth-child(even) {
+	padding-right: 17%;
+}
+
+.link-areas h2:nth-child(odd) {
+	padding-left: 17%;
+}
+
+.content {
+	font-size: 0.8em;
+	padding: 2.5em 5%;
+	width: 40%;
+}
+
+.content p {
+	padding-bottom: 15px;
+}
+
+.content h3 {
+	font-size: 1.5em;
+	padding-bottom: 10px;
+}
+
+#double-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+#double-grid .link-areas {
+	-webkit-box-pack: center;
+	justify-content: center;
+}
+
+#double-grid h2 {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+footer {
+	margin-bottom: 0;
+	width: 100%;
+}
+
+/* Styles for mobile viewports */
+@media (max-width: 1074px) {
+
+	/* Styles for the welcome area at the top of the page */
+	#welcome-area {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		flex-direction: column;
+		height: 90%;
+	}
+
+	#welcome-area img {
+		height: auto;
+		margin: 0 auto;
+		width: 200px;
+	}
+
+	#welcome-message {
+		font-size: clamp(20vw, 1.25em);
+		padding: 1em 0;
+	}
+
+	#welcome-message h2 {
+		padding: 0 2%;
+		padding-bottom: 0.5em;
+	}
+
+	#welcome-message p {
+		padding: 0 5%;
+		width: auto;
+	}
+
+	/* Styles for the links sections to other pages */
+	main a section.link-areas {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		flex-direction: column;
+	}
+
+	/* This is an strange selector, but it would not work with .link-areas:nth-of-type(3) */
+	main a:nth-child(3) section.link-areas {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: reverse;
+		flex-direction: column-reverse;
+	}
+
+	.link-areas h2:nth-child(odd),
+	.link-areas h2:nth-child(even) {
+		padding: 0.75em 0;
+	}
+
+	.link-areas div {
+		font-size: 0.75em;
+		margin: 0 auto;
+		padding-top: 0;
+		width: 80%;
+	}
+
+	#double-grid {
+		grid-template-columns: 1fr;
+	}
+}
