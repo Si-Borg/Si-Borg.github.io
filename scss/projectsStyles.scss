@@ -1,10 +1,20 @@
 /* Imports */
-@import url("./styles.css");
+@import "./styles";
 
 /* Page styling */
 
-
 /* Styles for the main content area */
+.project-group-intro {
+      padding: 1em;
+      box-shadow: var(--copper) -5px -5px 0 0;
+}
+
+.project {
+      display: grid;
+      padding: 2em 0;
+      margin: 10vh 0;
+      grid-column: content;
+}
 
 /* Media Queries */
 @media (max-width: 1074px) {

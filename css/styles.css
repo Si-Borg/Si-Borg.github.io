@@ -1,11 +1,11 @@
-/* Imports */
 @import url("./fonts.css");
-/* Variables */
+/* Colors */
 :root {
   --dark-gray: hsl(220, 5%, 11%);
-  --copper: hsl(20, 50%, 28%);
-  --blue: hsl(233, 77%, 20%);
-  --font-color: hsl(0, 0%, 100%);
+  --copper: hsl(20, 50%, 26%);
+  --blue: hsl(220, 38%, 13%);
+  --grayge: hsl(30, 7%, 44%);
+  --font-color: hsl(348, 45%, 98%);
 }
 
 /* CSS reset and defaults */
@@ -32,6 +32,21 @@ p {
 }
 
 /* Animations */
+@keyframes fade-in-glow {
+  0% {
+    box-shadow: hsl(220, 5%, 11%) 0 0 50px 25px;
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  35% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  100% {
+    box-shadow: #3d2214 0 0 50px 25px;
+    opacity: 1;
+  }
+}
 @keyframes fade-in {
   from {
     transform: translateX(-100px);
@@ -67,6 +82,10 @@ p {
   animation: fade-in ease-in-out 750ms forwards;
 }
 
+.fade-in-glow {
+  animation: fade-in-glow ease-in-out 2s forwards;
+}
+
 .full-width {
   grid-column: full-width;
 }
@@ -96,13 +115,25 @@ body {
   margin: 0 auto;
 }
 
+a {
+  transition: color 250ms ease;
+}
+
+a:hover {
+  color: var(--grayge);
+}
+
 nav {
+  background-color: var(--dark-gray);
   font-family: "Ubuntu Mono";
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: justify;
   justify-content: space-between;
   place-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 nav ul li {
   display: inline-block;
@@ -112,6 +143,9 @@ nav a {
   text-decoration: none;
   padding: 1em;
   font-size: 1.25em;
+}
+nav a:hover {
+  color: var(--copper);
 }
 
 /* Styles for the main content area */
@@ -123,12 +157,19 @@ header,
 main,
 section {
   display: grid;
+  align-items: center;
   grid-template-columns: [full-width-start] 10% [content-start] 0 [content-left-start] 1fr [content-left-end] 0 [content-right-start] 1fr [content-right-end] 0 [content-end] 10% [full-width-end];
 }
 
 header,
 section > * {
   grid-column: content;
+}
+
+footer {
+  font-size: 1.25em;
+  text-align: center;
+  margin: 1em;
 }
 
 /* Media Queries */

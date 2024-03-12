@@ -1,15 +1,10 @@
 /* Imports */
-@import url("./styles.css");
+@import "./styles";
 
 /* Page styling */
 
+
 /* Styles for the main content area */
-.project {
-      display: grid;
-      padding: 2em 0;
-      margin: 50vh 0;
-      grid-column: content;
-}
 
 /* Media Queries */
 @media (max-width: 1074px) {

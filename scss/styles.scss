@@ -1,14 +1,8 @@
-/* Imports */
+
 @import url("./fonts.css");
 
-/* Variables */
-
-:root {
-    --dark-gray: hsl(220, 5%, 11%);
-    --copper: hsl(20, 50%, 28%);
-    --blue: hsl(233, 77%, 20%);
-    --font-color: hsl(0, 0%, 100%);
-}
+/* Colors */
+@import "./colors";
 
 /* CSS reset and defaults */
 *,
@@ -34,78 +28,10 @@ p {
 }
 
 /* Animations */
-
-@keyframes fade-in {
-
-    from {
-        transform: translateX(-100px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0px);
-        opacity: 1;
-    }
-
-}
-
-@-webkit-keyframes fade-in {
-
-    from {
-        -webkit-transform: translateX(-100px);
-        opacity: 0;
-    }
-
-    to {
-        -webkit-transform: translateY(0px);
-        opacity: 1;
-    }
-
-}
-
-@keyframes revert-transform {
-
-    to {
-        transform: none;
-    }
-
-}
-
-@-webkit-keyframes revert-transform {
-
-    to {
-        -webkit-transform: none;
-    }
-
-}
+@import "./animations";
 
 /* Utility classes */
-
-.fade-in {
-    animation: fade-in ease-in-out 750ms forwards;
-}
-
-.full-width {
-    grid-column: full-width;
-}
-
-.content {
-    grid-column: content;
-}
-
-.content-left {
-    grid-column: content-left;
-}
-
-.content-right {
-    grid-column: content-right;
-    text-align: right;
-}
-
-.revert-transform {
-    animation: revert-transform 1s ease forwards;
-    transition: filter 1s ease; // This was the only way I could think of to get the brightness to reset smoothly
-}
+@import "./utilityClasses";
 
 /* Page styling */
 body {
@@ -114,13 +40,26 @@ body {
     margin: 0 auto;
 }
 
+a {
+    transition: color 250ms ease;
+}
+
+a:hover {
+    color: var(--grayge);
+}
+
 nav {
+    background-color: var(--dark-gray);
     font-family: 'Ubuntu Mono';
     display: -webkit-box;
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
     place-items: center;
+    // box-shadow: rgba($color: #000000, $alpha: 0.5) 0px 0px 10px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
 
     ul li {
         display: inline-block;
@@ -131,6 +70,10 @@ nav {
         text-decoration: none;
         padding: 1em;
         font-size: 1.25em;
+
+        &:hover {
+            color: var(--copper);
+        }
     }
 }
 
@@ -143,6 +86,7 @@ header,
 main,
 section {
     display: grid;
+    align-items: center;
     grid-template-columns:
         [full-width-start] 10% [content-start] 0 [content-left-start] 1fr [content-left-end] 0 [content-right-start] 1fr [content-right-end] 0 [content-end] 10% [full-width-end];
 }
@@ -150,6 +94,12 @@ section {
 header,
 section>* {
     grid-column: content;
+}
+
+footer {
+    font-size: 1.25em;
+    text-align: center;
+    margin: 1em;
 }
 
 /* Media Queries */

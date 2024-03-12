@@ -1,5 +1,197 @@
 /* Imports */
-@import url("./styles.css");
+@import url("./fonts.css");
+/* Colors */
+:root {
+  --dark-gray: hsl(220, 5%, 11%);
+  --copper: hsl(20, 50%, 26%);
+  --blue: hsl(220, 38%, 13%);
+  --grayge: hsl(30, 7%, 44%);
+  --font-color: hsl(348, 45%, 98%);
+}
+
+/* CSS reset and defaults */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--font-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Kanit SemiBold";
+}
+
+p {
+  font-family: "Kanit ExtraLight", sans-serif;
+}
+
+/* Animations */
+@keyframes fade-in-glow {
+  0% {
+    box-shadow: hsl(220, 5%, 11%) 0 0 50px 25px;
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  35% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  100% {
+    box-shadow: #3d2214 0 0 50px 25px;
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-in {
+  from {
+    -webkit-transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes revert-transform {
+  to {
+    transform: none;
+  }
+}
+@-webkit-keyframes revert-transform {
+  to {
+    -webkit-transform: none;
+  }
+}
+/* Utility classes */
+.fade-in {
+  animation: fade-in ease-in-out 750ms forwards;
+}
+
+.fade-in-glow {
+  animation: fade-in-glow ease-in-out 2s forwards;
+}
+
+.full-width {
+  grid-column: full-width;
+}
+
+.content {
+  grid-column: content;
+}
+
+.content-left {
+  grid-column: content-left;
+}
+
+.content-right {
+  grid-column: content-right;
+  text-align: right;
+}
+
+.revert-transform {
+  animation: revert-transform 1s ease forwards;
+  transition: filter 1s ease;
+}
+
+/* Page styling */
+body {
+  background-color: var(--dark-gray);
+  max-width: 2160px;
+  margin: 0 auto;
+}
+
+a {
+  transition: color 250ms ease;
+}
+
+a:hover {
+  color: var(--grayge);
+}
+
+nav {
+  background-color: var(--dark-gray);
+  font-family: "Ubuntu Mono";
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  place-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+nav ul li {
+  display: inline-block;
+  list-style-type: none;
+}
+nav a {
+  text-decoration: none;
+  padding: 1em;
+  font-size: 1.25em;
+}
+nav a:hover {
+  color: var(--copper);
+}
+
+/* Styles for the main content area */
+header {
+  padding: 2em;
+}
+
+header,
+main,
+section {
+  display: grid;
+  align-items: center;
+  grid-template-columns: [full-width-start] 10% [content-start] 0 [content-left-start] 1fr [content-left-end] 0 [content-right-start] 1fr [content-right-end] 0 [content-end] 10% [full-width-end];
+}
+
+header,
+section > * {
+  grid-column: content;
+}
+
+footer {
+  font-size: 1.25em;
+  text-align: center;
+  margin: 1em;
+}
+
+/* Media Queries */
+@media (max-width: 1074px) {
+  * {
+    text-align: center;
+  }
+  header {
+    padding: 1em;
+  }
+  header > * {
+    margin: 1em;
+  }
+  .full-width,
+  .content,
+  .content-left,
+  .content-right {
+    grid-column: content;
+    text-align: center;
+  }
+}
 /* Page styling */
 /* Styles for the main content area */
 /* Media Queries */

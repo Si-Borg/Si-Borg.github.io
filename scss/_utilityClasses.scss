@@ -1,0 +1,29 @@
+.fade-in {
+    animation: fade-in ease-in-out 750ms forwards;
+}
+
+.fade-in-glow {
+    animation: fade-in-glow ease-in-out 2s forwards;
+}
+
+.full-width {
+    grid-column: full-width;
+}
+
+.content {
+    grid-column: content;
+}
+
+.content-left {
+    grid-column: content-left;
+}
+
+.content-right {
+    grid-column: content-right;
+    text-align: right;
+}
+
+.revert-transform {
+    animation: revert-transform 1s ease forwards;
+    transition: filter 1s ease; // This was the only way I could think of to get the brightness to reset smoothly
+}
