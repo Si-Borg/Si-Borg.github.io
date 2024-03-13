@@ -21,7 +21,7 @@ export function navInit() {
 	}
 
 	// Added to provide a way back to portfolio site without using the browser's back button
-	document.getElementsByTagName("body")[0].insertAdjacentHTML("afterbegin", '<div style="position:absolute;top:0;left:0;color:white;background-color:black;z-index:999999;"><h4><a href="../../projects.html">Return to projects</a></h4></div>');
+	document.getElementsByTagName("body")[0].insertAdjacentHTML("beforeend", '<div style="position:sticky;bottom:0;left:0;background-color:black;z-index:999999;width:fit-content;"><a href="../../projects.html"><p style="padding:5px;color:white;text-decoration:underline;">Return to projects</p></a></div>');
 }
 
 /*******************************************
