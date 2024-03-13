@@ -1,8 +1,8 @@
 @keyframes fade-in-glow {
 
     0% {
-        box-shadow: $dark-gray 0 0 50px 25px;
-        transform: translateX(-100px);
+        transform: translateY(-100px);
+        box-shadow: var(--dark-gray) 0 0 25px 25px;
         opacity: 0;
     }
 
@@ -12,7 +12,7 @@
     }
 
     100% {
-        box-shadow: darken($color: $copper, $amount: 10%) 0 0 50px 25px;
+        box-shadow: darken($color: $copper, $amount: 10%) 0 0 50px 50px;
         opacity: 1;
     }
 
@@ -21,7 +21,7 @@
 @keyframes fade-in {
 
     from {
-        transform: translateX(-100px);
+        transform: translateY(-100px);
         opacity: 0;
     }
 
@@ -32,32 +32,10 @@
 
 }
 
-@-webkit-keyframes fade-in {
-
-    from {
-        -webkit-transform: translateX(-100px);
-        opacity: 0;
-    }
-
-    to {
-        -webkit-transform: translateY(0px);
-        opacity: 1;
-    }
-
-}
-
 @keyframes revert-transform {
 
     to {
         transform: none;
-    }
-
-}
-
-@-webkit-keyframes revert-transform {
-
-    to {
-        -webkit-transform: none;
     }
 
 }

@@ -2,11 +2,17 @@
 @import "./styles";
 
 /* Page styling */
+header {
+      text-align: center;
+}
 
 /* Styles for the main content area */
 .project-group-intro {
       padding: 1em;
-      box-shadow: var(--copper) -5px -5px 0 0;
+      border-top: 5px solid var(--grayge);
+      border-left: 5px solid var(--copper);
+      border-radius: 3px;
+      border-top-left-radius: 10px;
 }
 
 .project {
@@ -14,6 +20,10 @@
       padding: 2em 0;
       margin: 10vh 0;
       grid-column: content;
+      border-bottom: 5px solid var(--copper);
+      border-right: 5px solid var(--grayge);
+      border-radius: 3px;
+      border-bottom-right-radius: 10px;
 }
 
 /* Media Queries */
@@ -23,7 +33,8 @@
             text-align: center;
       }
 
-      main section {
+      main section,
+      .project-group-intro {
             grid-column: full-width;
       }
 
