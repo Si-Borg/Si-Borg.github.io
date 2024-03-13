@@ -1,0 +1,43 @@
+@import url("./styles.css");
+
+/* Styles written by Silas Callahan */
+main {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+/* Events styles */
+section {
+	padding: 1em 3em;
+}
+
+#current-events {
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+}
+
+.event {
+	text-align: left;
+}
+
+h2 {
+	font-size: 1.75em;
+}
+
+h3 {
+	color: var(--main-color);
+	margin-top: 10px;
+}
+
+/* Styles for mobile viewports */
+@media (max-width: 1074px) {
+	main {
+		gap: 2em;
+		grid-template-columns: 1fr;
+	}
+
+	/* Events styles */
+	#current-events {
+		border: none;
+	}
+}

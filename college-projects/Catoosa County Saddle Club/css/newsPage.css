@@ -1,0 +1,19 @@
+@import url("./styles.css");
+
+/* Styles written by Silas Callahan */
+
+/* Styles for the containers that hold the news items */
+.news-box {
+	border-radius: 1em;
+	margin: 15px 10%;
+	padding: 2em 10%;
+}
+
+.news-box:nth-child(odd) {
+	background-color: var(--light-text-color);
+}
+
+.news-box:nth-child(even) {
+	background-color: var(--additional-accent-color);
+	color: var(--light-text-color);
+}

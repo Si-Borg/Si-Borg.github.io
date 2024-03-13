@@ -1,0 +1,7 @@
+Open a terminal window in, or open one and navigate to, the folder that holds the pictures set.
+Once you are there, run this command to add the file names and extension of every photo to a text file:
+
+"ls -n > filenames.txt"
+
+Once you have the text file, surround every filename with double quotes and add a comma after the quotation marks to all but the last one. 
+Enclose the list of files with square brackets and add a new array item to the pictureSetsArray.js file with the name of the folder that holds that set of pictures as the first item before the filenames in the square brackets.

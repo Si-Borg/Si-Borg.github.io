@@ -1,0 +1,61 @@
+@import url("./styles.css");
+
+/* Styles written by Silas Callahan */
+
+h2 {
+	background-color: var(--backup-background);
+	border-bottom: 2px solid var(--dark-text-color);
+	border-top: 2px solid var(--dark-text-color);
+	margin: 0 auto;
+	padding: 1em 0;
+	width: 100%;
+}
+
+/* Styles for sections that hold content about joining */
+.content-sections {
+	-webkit-box-align: center;
+	align-items: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: center;
+}
+
+.content-sections h3 {
+	margin-bottom: 1em;
+}
+
+.content-sections div {
+	padding: 2em;
+	width: 70%;
+}
+
+.content-sections div ul li {
+	list-style-type: none;
+	margin: 1em;
+}
+
+.content-sections div img {
+	height: 5em;
+}
+
+/* Styles for the map of the location of Catoosa County Saddle Club uses for events */
+#google-map {
+	border: 2px solid black;
+	border-radius: 10px;
+	height: 350px;
+	width: 100%;
+}
+
+/* Styles for mobile viewports */
+@media (max-width: 1074px) {
+
+	/* Styles for sections that hold content about joining */
+	.content-sections {
+		grid-template-columns: 1fr;
+	}
+
+	.content-sections div {
+		padding: 1em 2em;
+		width: 100%;
+	}
+}

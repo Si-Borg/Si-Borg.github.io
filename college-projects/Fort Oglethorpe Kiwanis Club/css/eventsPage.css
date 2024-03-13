@@ -1,0 +1,91 @@
+@import url("./styles.css");
+/* Styles written by Silas Callahan */
+
+/* Styles for the main content of the page */
+main {
+	display: grid;
+	grid-template-columns: 0.3fr 1fr;
+	justify-items: center;
+}
+
+.column:first-of-type {
+	border-right: 2px solid black;
+}
+
+/* Styles for the events that happen at set intervals */
+.frequency ul li {
+	padding: 10px;
+	padding-right: 0;
+	width: 75%;
+}
+
+.frequency ul {
+	list-style-type: none;
+}
+
+#recurring-events {
+	display: grid;
+	font-size: 1.25em;
+	grid-template-rows: 50px repeat(3, minmax(150px, 1fr));
+	-webkit-box-pack: center;
+	justify-content: center;
+	padding-left: 1em;
+	text-align: left;
+}
+
+/* Styles for events that are sorted into sections based on current date of the page visitor */
+#past-events,
+#current-events,
+#future-events {
+	margin: 0 auto;
+	padding: 2em;
+	width: 90%;
+}
+
+#past-events {
+	border-bottom: 2px solid black;
+}
+
+#future-events {
+	border-top: 2px solid black;
+}
+
+.event {
+	padding: 5px 0;
+	text-align: left;
+}
+
+/* Styles for mobile viewports */
+@media (max-width: 1074px) {
+
+	/* Styles for the main content of the page */
+	main {
+		gap: 2em;
+		grid-template-columns: 1fr;
+	}
+
+	.column:nth-of-type(-n + 1) {
+		border-bottom: 2px solid black;
+		border-right: none;
+	}
+
+	/* Styles for the events that happen at set intervals */
+	#recurring-events {
+		padding: 0;
+		text-align: center;
+		width: 90%;
+	}
+
+	#recurring-events ul li {
+		padding: 10px 0;
+	}
+
+	/* Styles for events that are sorted into sections based on current date of the page visitor */
+	.frequency ul li {
+		margin: 0 auto;
+	}
+
+	.event {
+		text-align: center;
+	}
+}

@@ -1,0 +1,41 @@
+@keyframes fade-in-glow {
+
+    0% {
+        transform: translateY(-100px);
+        box-shadow: var(--dark-gray) 0 0 25px 25px;
+        opacity: 0;
+    }
+
+    35% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    100% {
+        box-shadow: darken($color: $copper, $amount: 10%) 0 0 50px 50px;
+        opacity: 1;
+    }
+
+}
+
+@keyframes fade-in {
+
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+}
+
+@keyframes revert-transform {
+
+    to {
+        transform: none;
+    }
+
+}

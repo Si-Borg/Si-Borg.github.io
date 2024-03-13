@@ -1,0 +1,126 @@
+@import url("./styles.css");
+/* Styles written by Silas Callahan */
+
+/* Styles for the main content of the page */
+main {
+	gap: 0;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.column {
+	text-align: center;
+}
+
+.column:not(:last-child) {
+	border-right: 2px solid black;
+}
+
+.column:nth-child(1) {
+	border-bottom: 2px solid black;
+	border-right: none;
+	grid-column: span 3;
+	grid-row: 1;
+	padding-bottom: 2em;
+}
+
+/* Styles for the Kiwanis district element */
+#kiwanis-district {
+	margin: 0 auto;
+	max-width: 400px;
+}
+
+#kiwanis-district h1 {
+	font-size: 2.25em;
+	padding-bottom: 20px;
+}
+
+#kiwanis-district img {
+	max-width: 100%;
+}
+
+#kiwanis-district h2 {
+	color: var(--gold);
+	font-family: var(--body-copy-regular);
+	font-weight: 400;
+	letter-spacing: 0;
+	line-break: strict;
+	margin-bottom: 0;
+	padding: 0 0 0 22%;
+	text-align: left;
+	text-transform: none;
+}
+
+#kiwanis-district a {
+	text-decoration: none;
+}
+
+/* Styles for the links to other websites */
+.image-links {
+	-webkit-box-align: end;
+	align-items: end;
+	-webkit-box-align: start;
+	align-items: start;
+	display: grid;
+	gap: 5px;
+	grid-template-columns: repeat(auto-fit, 140px);
+	-webkit-box-pack: center;
+	justify-content: center;
+	padding: 0 10px;
+}
+
+.image-links img {
+	max-height: 50px;
+	max-width: 100px;
+}
+
+.image-links a {
+	padding: 0.5em 0;
+}
+
+.text-links {
+	display: -webkit-box;
+	display: flex;
+	flex-wrap: wrap;
+	-webkit-box-pack: center;
+	justify-content: center;
+}
+
+.text-links a {
+	max-width: 140px;
+	min-width: 75px;
+	padding: 5px;
+}
+
+/* Styles for mobile viewports */
+@media (max-width: 1100px) {
+
+	/* Styles for the main content of the page */
+	main {
+		gap: 0;
+		grid-template-columns: 1fr;
+	}
+
+	.column:nth-child(1) {
+		grid-column: 1;
+	}
+
+	.column:not(:last-child) {
+		border-right: none;
+	}
+
+	.column:nth-child(n + 3) {
+		border: none;
+		border-top: 2px solid black;
+	}
+	
+	/* Styles for the links to other websites */
+	.text-links {
+		margin: 0 auto;
+		width: 90%;
+	}
+
+	.text-links a {
+		padding: 5px 0.5em;
+		width: auto;
+	}
+}

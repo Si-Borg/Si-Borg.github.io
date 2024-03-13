@@ -1,0 +1,77 @@
+/* Imports */
+@import "./styles";
+
+/* Page styling */
+header {
+      grid-template-columns: minmax(400px, 600px) minmax(100px, 300px);
+      -webkit-box-pack: space-evenly;
+      justify-content: space-evenly;
+
+      a:hover {
+            color: var(--copper);
+      }
+}
+
+#bio {
+      align-self: baseline;
+}
+
+#profile {
+      width: 85%;
+      border-radius: 1em;
+      border: 5px solid var(--copper);
+      backdrop-filter: blur(10px);
+}
+
+#profile-container {
+      aspect-ratio: 1/1;
+      display: flex;
+      flex-wrap: wrap;
+      place-content: center;
+}
+
+/* Styles for the main content area */
+section {
+      background-color: var(--copper);
+      display: grid;
+      padding: 2em 0;
+      margin: 8em 0;
+      border-radius: 10px;
+      grid-column: content;
+      font-size: 1.5em;//TODO: Change this to grow after the block appears in the viewport
+}
+
+/* Media Queries */
+@media (max-width: 1074px) {
+
+      * {
+            text-align: center;
+      }
+
+      header {
+            background-image: url("../media/mobile-bg.svg");
+            background-size: 100% 100%;
+            grid-template-columns: 1fr;
+            justify-items: center;
+      }
+
+      #bio {
+            max-width: 525px;
+      }
+
+      #profile-container {
+            grid-row: 1;
+            max-width: 300px;
+            align-self: center;
+      }
+
+      section {
+            border-radius: 0;
+            grid-column: full-width;
+      }
+
+      section div {
+            padding: 0 1em;
+      }
+
+}

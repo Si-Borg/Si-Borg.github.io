@@ -1,13 +1,13 @@
 // TODO: Neither of these seem efficient, figure out how to improve it.
 /**
- * Applies an effect that makes it look like the
- * element wobbles when you hover over it.
- * 
- * @param {MouseEvent} event -Event that has the position of the mouse cursor on the element
- */
+  * Applies an effect that makes it look like the
+  * element wobbles when you hover over it.
+  * 
+  * @param {MouseEvent} event -Event that has the position of the mouse cursor on the element
+  */
 export function wobbleEffect(event) {
 
-	// Prevent grabbing the image
+	// Prevent grabbing of the image
 	event.preventDefault();
 
 	let effectTarget = event.target;
@@ -41,11 +41,11 @@ export function wobbleEffect(event) {
 }
 
 /**
- * Applies an effect that makes it look like the
- * element wobbles when you touch it.
- * 
- * @param {TouchEvent} event 
- */
+  * Applies an effect that makes it look like the
+  * element wobbles when you touch it.
+  * 
+  * @param {TouchEvent} event 
+  */
 export function mobileWobbleEffect(event) {
 	// Prevent scrolling while touching the element
 	event.preventDefault();
@@ -82,12 +82,12 @@ export function mobileWobbleEffect(event) {
 }
 
 /**
- * Use an IntersectionObserver to apply and remove effects
- * when the elements come into view.
- *
- * @param {NodeList} nodeList - List of nodes to watch using intersection observer
- * @param {String} effectClass - Name of the utility class that adds the animation
- */
+  * Use an IntersectionObserver to apply and remove effects
+  * when the elements come into view.
+  *
+  * @param {NodeList} nodeList - List of nodes to watch using intersection observer
+  * @param {String} effectClass - Name of the utility class that adds the animation
+  */
 export function onViewEffect(nodeList, effectClass) {
 	const observer = new IntersectionObserver((entries) => {
 		entries.forEach((entry) => {
@@ -104,12 +104,13 @@ export function onViewEffect(nodeList, effectClass) {
 		observer.observe(node);
 	});
 }
+
 /**
- * Takes the brightness sent with the function call and returns
- * a value that follow a logorithmic curve.
- * 
- * @param {brightDec} float - A decimal value representing the brightness of the filter
- */
+  * Takes the brightness sent with the function call and returns
+  * a value that follow a logorithmic curve.
+  * 
+  * @param {brightDec} float - A decimal value representing the brightness of the filter
+  */
 function logBrightness(brightDec) {
 	
 	// Checks to make sure the output will be in an acceptable range
@@ -125,11 +126,10 @@ function logBrightness(brightDec) {
 }
 
 /**
- * Sets a timeout for the effect on the profile image on the home page.
- * 
- * @param {HTMLElement} profileImg - Element that has the transformation applied to it that will be reversed
- */
-
+  * Sets a timeout for the effect on the profile image on the home page.
+  * 
+  * @param {HTMLElement} profileImg - Element that has the transformation applied to it that will be reversed
+  */
 export function profileTimeOut(profileImg) {
 	// Set the initial state and timer variables
 	let isTransformed = false;

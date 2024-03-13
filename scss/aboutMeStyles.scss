@@ -1,0 +1,41 @@
+/* Imports */
+@import "./styles";
+
+/* Page styling */
+header {
+      text-align: center;
+}
+
+/* Styles for the main content area */
+main section {
+      margin: 1em 0;
+}
+
+#verse {
+      text-align: center;
+      background-color: var(--grayge);
+      margin: 0 auto;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: darken($color: $grayge, $amount: 15%) 0 0 50px 10px;
+      
+      h3, p {
+            font-family: 'Ubuntu Mono';
+            line-height: 1.4em;
+            color: var(--dark-gray);
+      }
+}
+
+/* Media Queries */
+@media (max-width: 1074px) {
+
+      * {
+            text-align: center;
+      }
+
+      main section,
+      section>* {
+            grid-column: full-width;
+      }
+
+}

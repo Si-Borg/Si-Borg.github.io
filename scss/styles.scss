@@ -1,0 +1,149 @@
+
+@import url("./fonts.css");
+
+/* Colors */
+@import "./colors";
+
+/* CSS reset and defaults */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--font-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Kanit SemiBold';
+}
+
+p {
+    font-family: 'Kanit ExtraLight', sans-serif;
+}
+
+/* Animations */
+@import "./animations";
+
+/* Utility classes */
+@import "./utilityClasses";
+
+/* Page styling */
+body {
+    background-color: var(--dark-gray);
+    max-width: 2160px;
+    margin: 0 auto;
+}
+
+a {
+    transition: color 250ms ease;
+}
+
+a:hover {
+    color: var(--grayge);
+}
+
+nav {
+    background-image: url("../media/nav-bg.png");
+    background-size: 100% 100%;
+    font-family: 'Ubuntu Mono';
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    place-items: center;
+    // box-shadow: rgba($color: #000000, $alpha: 0.5) 0px 0px 10px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    ul li {
+        display: inline-block;
+        list-style-type: none;
+    }
+
+    a {
+        text-decoration: none;
+        padding: 1em;
+        font-size: 1.25em;
+
+        &:hover {
+            color: var(--dark-gray);
+        }
+    }
+}
+
+/* Styles for the main content area */
+header {
+    background-image: url("../media/bg.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 2em;
+    min-height: 350px;
+}
+
+header,
+main,
+section {
+    display: grid;
+    align-items: center;
+    grid-template-columns:
+        [full-width-start] 10% [content-start] 0 [content-left-start] 1fr [content-left-end] 0 [content-right-start] 1fr [content-right-end] 0 [content-end] 10% [full-width-end];
+}
+
+header,
+section>* {
+    grid-column: content;
+}
+
+footer {
+    font-size: 1.25em;
+    text-align: center;
+    margin: 4em;
+}
+
+/* Media Queries */
+@media (max-width: 1074px) {
+
+    * {
+        text-align: center;
+    }
+
+    header {
+        background-image: none;
+        padding: 1em;
+    }
+
+    header>* {
+        margin: 1em;
+    }
+
+    .content,
+    .content-left,
+    .content-right {
+        grid-column: content;
+        text-align: center;
+    }
+
+    .content-right {
+        margin-top: 1em;
+    }
+
+}
+
+@media (max-width: 380px) {
+    nav {
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        ul {
+            display: block;
+            padding: 1em;
+        }
+    }
+}

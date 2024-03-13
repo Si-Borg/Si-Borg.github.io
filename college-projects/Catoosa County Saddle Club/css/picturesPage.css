@@ -1,0 +1,108 @@
+@import url("./styles.css");
+
+/* Styles written by Silas Callahan */
+
+/* Picture set selector */
+#picture-sets {
+	border-radius: 0.5em;
+	margin: 5px auto;
+	padding: 0.5em;
+}
+
+/* View button */
+#show-pictures {
+	background-color: white;
+	border-radius: 0.5em;
+	border-width: 1px;
+	padding: 0.5em;
+}
+
+/* Container that holds the images in a set*/
+#picture-set-container {
+	-webkit-box-align: start;
+	align-items: flex-start;
+	background-color: white;
+	display: -webkit-box;
+	display: flex;
+	flex-wrap: wrap;
+	height: 450px;
+	-webkit-box-pack: center;
+	justify-content: center;
+	margin: 1em 2em;
+	overflow-y: scroll;
+}
+
+/* Styles for the images and containing divs */
+#picture-set-container img {
+	height: 100%;
+	width: auto;
+}
+
+.img-box {
+	border: 2px solid var(--accent-color);
+	border-radius: 10px;
+	box-shadow: black 5px 5px 10px;
+	display: -webkit-inline-box;
+	display: inline-flex;
+	height: 150px;
+	-webkit-box-pack: center;
+	justify-content: center;
+	margin: 10px;
+	overflow: hidden;
+	-webkit-transition: box-shadow 250ms ease-in-out;
+	transition: box-shadow 250ms ease-in-out;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+}
+
+.img-box:hover {
+	box-shadow: black 0 3px 5px;
+}
+
+/* Styling for the dialog modal that shows the enlarged version of the picture */
+#fullscreen {
+	-webkit-box-align: center;
+	align-items: center;
+	background-color: transparent;
+	border: 0px solid transparent !important;
+	color: white;
+	font-size: 1.25em;
+	margin: auto;
+	outline-color: transparent !important;
+}
+
+#fullscreen::-webkit-backdrop {
+	background-color: rgba(0, 0, 0, 0.75);
+}
+
+#fullscreen::backdrop {
+	background-color: rgba(0, 0, 0, 0.75);
+}
+
+#fullscreen img {
+	height: 300px;
+	width: auto;
+}
+
+/* Styles for mobile viewports */
+@media (max-width: 1074px) {
+	.img-box {
+		height: 100px;
+	}
+
+	#picture-set-container {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	/* Styling for the dialog modal that shows the enlarge version of the picture */
+	#fullscreen h3 {
+		word-wrap: break-word;
+	}
+
+	#fullscreen img {
+		height: 200px;
+		width: auto;
+	}
+}

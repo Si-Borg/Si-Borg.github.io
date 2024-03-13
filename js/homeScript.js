@@ -14,5 +14,5 @@ function init() {
 
       // Add fade in effect to section elements
       let sections = document.querySelectorAll('main section');
-      onViewEffect(sections, "fade-in");
+      onViewEffect(sections, "fade-in-glow");
 }

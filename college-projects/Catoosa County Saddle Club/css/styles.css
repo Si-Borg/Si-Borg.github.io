@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Glegoo:wght@700&family=Lobster&family=Signika+Negative:wght@500&display=swap');
+
+/* Styles written by Silas Callahan */
+
+/* CSS reset */
+*,
+*::before,
+*::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+}
+
+/* Colors used across the website */
+:root {
+      --main-color: #283a82;
+      --accent-color: #7b84ab;
+      --additional-accent-color: #89602a;
+      --content-background: #f6f6f9;
+      --dark-text-color: #000000;
+      --light-text-color: #E4DCDD;
+      --backup-background: #FFFFFF;
+}
+
+/* Animations */
+@-webkit-keyframes linear-fill {
+      from {
+            box-shadow: transparent 0 0 0 0;
+      }
+
+      to {
+            box-shadow: var(--additional-accent-color) 0 0 0 10px;
+      }
+}
+
+@keyframes linear-fill {
+      from {
+            box-shadow: transparent 0 0 0 0;
+      }
+
+      to {
+            box-shadow: var(--additional-accent-color) 0 0 0 10px;
+      }
+}
+
+@-webkit-keyframes linear-empty {
+      from {
+            box-shadow: var(--additional-accent-color) 0 0 0 10px;
+      }
+
+      to {
+            box-shadow: transparent 0 0 0 0;
+      }
+}
+
+@keyframes linear-empty {
+      from {
+            box-shadow: var(--additional-accent-color) 0 0 0 10px;
+      }
+
+      to {
+            box-shadow: transparent 0 0 0 0;
+      }
+}
+
+@-webkit-keyframes nav-on-hover {
+      from {
+            background-color: transparent;
+      }
+
+      to {
+            background-color: rgba(169, 169, 169, 0.25);
+            border-color: rgb(170, 170, 170);
+      }
+}
+
+@keyframes nav-on-hover {
+      from {
+            background-color: transparent;
+      }
+
+      to {
+            background-color: rgba(169, 169, 169, 0.25);
+            border-color: rgb(170, 170, 170);
+      }
+}
+
+@-webkit-keyframes nav-off-hover {
+      from {
+            background-color: rgba(169, 169, 169, 0.25);
+            border-color: rgb(170, 170, 170);
+      }
+
+      to {
+            background-color: transparent;
+            border-bottom: solid transparent 4px;
+      }
+}
+
+@keyframes nav-off-hover {
+      from {
+            background-color: rgba(169, 169, 169, 0.25);
+            border-color: rgb(170, 170, 170);
+      }
+
+      to {
+            background-color: transparent;
+            border-bottom: solid transparent 4px;
+      }
+}
+
+/*****************
+* Utility Classes* 
+******************/
+/* Animation classes to apply animation effects */
+.large-nav-animation {
+      -webkit-animation: nav-off-hover ease-in 500ms forwards;
+      animation: nav-off-hover ease-in 500ms forwards;
+}
+
+.large-nav-animation:hover {
+      -webkit-animation: nav-on-hover ease-out 750ms forwards;
+      animation: nav-on-hover ease-out 750ms forwards;
+}
+
+/* Flex class to apply flex formating */
+.flex {
+      display: -webkit-box;
+      display: flex;
+}
+
+/* Body style rules */
+a {
+      text-decoration: none;
+}
+
+body {
+      background-attachment: fixed;
+      background-color: var(--backup-background);
+      background-image: url(../media/trail-background.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: var(--text-color);
+      margin: 0 auto;
+      max-width: 2560px;
+}
+
+h1 {
+      font-family: 'Lobster', sans-serif;
+}
+
+h2,
+h3 {
+      font-family: 'Glegoo', serif;
+}
+
+/* Navigation bar style rules that apply to both small and large viewports */
+nav {
+      background: -webkit-gradient(linear, left bottom, left top, from(#072151), color-stop(10%), to(var(--main-color)));
+      background: linear-gradient(0deg, #072151, 10%, var(--main-color));
+      color: var(--light-text-color);
+      font-family: 'Glegoo', serif;
+      position: -webkit-sticky;
+      position: sticky;
+      text-shadow: var(--dark-text-color) 0px 0px 7px;
+      top: 0;
+      z-index: 99999;
+}
+
+/* Navigation bar style rules for large viewports */
+#large-nav a {
+      color: var(--light-text-color);
+      padding: 0 1em;
+}
+
+#large-nav ul li a {
+      border-bottom: solid transparent 4px;
+      border-radius: 0.4em 0.4em 0 0;
+      margin-left: 5px;
+      padding: 0.65em 1em;
+}
+
+#large-nav {
+      -webkit-box-align: center;
+      align-items: center;
+      height: 57px;
+      -webkit-box-pack: justify;
+      justify-content: space-between;
+}
+
+#site-name {
+      color: var(--light-text-color);
+      display: block;
+      font-size: 1.4em;
+}
+
+#site-name:hover {
+      text-shadow: none;
+}
+
+#large-nav ul {
+      -webkit-box-align: center;
+      align-items: center;
+      -webkit-box-pack: end;
+      justify-content: end;
+      list-style-type: none;
+      padding-right: 0.5em;
+}
+
+/* Small nav menu styles */
+/* Hide navigation area for small viewports while viewing in a large viewport */
+#small-nav-bar {
+      -webkit-box-align: center;
+      align-items: center;
+      border: none;
+      border-radius: 0;
+      display: none;
+      font-size: 2em;
+      height: 60px;
+      -webkit-box-pack: justify;
+      justify-content: space-between;
+}
+
+#small-nav-bar a {
+      color: var(--light-text-color);
+      padding: 0 0.5em;
+}
+
+#small-nav-button {
+      height: 45px;
+      padding: 0.25em 0.5em;
+}
+
+#small-nav {
+      -webkit-box-align: center;
+      align-items: center;
+      background-color: transparent;
+      background-color: rgba(0, 0, 0, 0.75);
+      border: 0px solid transparent !important;
+      border-radius: 10px;
+      color: white;
+      margin: auto;
+      outline-color: transparent !important;
+      padding: 1em;
+}
+
+#small-nav::-webkit-backdrop {
+      opacity: 0;
+      -webkit-transition: opacity 1s;
+      transition: opacity 1s;
+}
+
+#small-nav::backdrop {
+      opacity: 0;
+      -webkit-transition: opacity 1s;
+      transition: opacity 1s;
+}
+
+#small-nav[open]::-webkit-backdrop {
+      opacity: 1;
+}
+
+#small-nav[open]::backdrop {
+      opacity: 1;
+}
+
+#small-nav ul {
+      list-style-type: none;
+}
+
+#small-nav a {
+      background-color: var(--backup-background);
+      border-radius: 10px;
+      color: var(--main-color);
+      display: block;
+      font-size: 1.5em;
+      margin: 0 auto;
+      margin: 0.5em 1em;
+      padding: 0.5em 1.5em;
+      text-decoration: none;
+      text-shadow: none;
+}
+
+/* Small nav bar button */
+#close-nav-button {
+      border: 2px solid gray;
+      border-radius: 10px;
+      color: var(--main-color);
+      padding: 0.25em 1em;
+}
+
+/* Styles for the header element that has the title of the page */
+header {
+      background-color: var(--accent-color);
+      border-radius: 5px 5px 0 0;
+      color: var(--light-text-color);
+      margin: 0 auto;
+      margin-top: 1em;
+      padding: 50px 0;
+      position: relative;
+      text-align: center;
+      text-shadow: rgba(0, 0, 0, 0.75) 2px 2px 8px;
+      width: 85%;
+}
+
+/* Styles that create the ribbon effect on the header element */
+header::before,
+header::after {
+      border-bottom: solid transparent 50px;
+      border-top: solid transparent 50px;
+      content: '';
+      position: absolute;
+      top: 108px;
+}
+
+header::before {
+      border-left: solid var(--main-color) 50px;
+      left: 28px;
+      rotate: -45deg;
+}
+
+header::after {
+      border-right: solid var(--main-color) 50px;
+      right: 28px;
+      rotate: 45deg;
+}
+
+/* Styles for the main content of the page */
+main {
+      background-color: var(--content-background);
+      font-family: 'Signika Negative', sans-serif;
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content;
+      margin: 0 auto;
+      padding: 2em 0;
+      position: relative;
+      text-align: center;
+      width: 80%;
+}
+
+/* Style rule that forces certain form element to inherit font styles */
+button,
+select {
+      font: inherit;
+}
+
+/* Styling for the footer area */
+footer {
+      background-color: var(--backup-background);
+      border-radius: 0 0 5px 5px;
+      border-top: solid black 2px;
+      font-family: 'Signika Negative', sans-serif;
+      margin: 0 auto;
+      margin-bottom: 1em;
+      padding: 1em 0;
+      text-align: center;
+      width: 80%;
+}
+
+/* Styles for mobile viewports */
+@media (max-width: 1074px) {
+
+      * {
+            text-align: center;
+      }
+
+      body {
+            background-image: none;
+      }
+
+      #large-nav {
+            display: none;
+      }
+
+      #small-nav-bar {
+            display: -webkit-box;
+            display: flex;
+      }
+
+      header {
+            border-radius: 0;
+            margin-top: 0;
+            width: 100%;
+      }
+
+      /* Removes ribbon effect on small viewports */
+      header::before,
+      header::after {
+            content: none;
+      }
+
+      main,
+      footer {
+            margin: 0 auto;
+            width: 100%;
+      }
+}
