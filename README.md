@@ -9,7 +9,7 @@ If you are here, then it probably means you're interested in what I have to offe
 - Java
 - PHP
 
-### Frameworks
+### JS Libraries and Frameworks
 - ~~React~~ (Working on it!)
 
 ### Non-programming Languages
