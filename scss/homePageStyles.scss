@@ -10,6 +10,13 @@ header {
       a:hover {
             color: var(--copper);
       }
+
+      span {
+            font-weight: bold;
+            font-size: 1.5em;
+            text-align: center;
+            line-height: 2em;
+      }
 }
 
 #bio {

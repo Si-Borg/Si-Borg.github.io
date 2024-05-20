@@ -208,10 +208,10 @@ main section {
 #verse {
   text-align: center;
   background-color: var(--grayge);
-  margin: 0 auto;
+  margin: 1em auto 0 auto;
   padding: 10px;
   border-radius: 10px;
-  box-shadow: #4f4a45 0 0 50px 10px;
+  box-shadow: #4f4a45 0 0 25px 10px;
 }
 #verse h3, #verse p {
   font-family: "Ubuntu Mono";

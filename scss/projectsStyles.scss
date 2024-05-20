@@ -26,6 +26,17 @@ header {
       border-bottom-right-radius: 10px;
 }
 
+.showcase {
+      text-align: center;
+      margin: 1em auto;
+}
+
+.projectImg {
+      margin-top: 1em;
+      width: 90%;
+      max-height: 400px;
+}
+
 /* Media Queries */
 @media (max-width: 1074px) {
 
