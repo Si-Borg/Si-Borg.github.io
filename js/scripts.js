@@ -94,9 +94,10 @@ export function onViewEffect(nodeList, effectClass) {
 			entry.target.style.opacity = "0";
 			if (entry.isIntersecting) {
 				entry.target.classList.add(effectClass);
-			} else {
-				entry.target.classList.remove(effectClass);
 			}
+			// else {
+			// 	entry.target.classList.remove(effectClass);
+			// }
 		});
 	});
 
