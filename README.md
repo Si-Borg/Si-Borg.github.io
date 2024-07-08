@@ -5,18 +5,20 @@ If you are here, then it probably means you're interested in what I have to offe
 
 ## The languages I have experience with are:
 ### Programming Languages
-- JavaScript
+- JavaScript/TypeScript
 - Java
 - PHP
 
 ### JS Libraries and Frameworks
-- ~~React~~ (Working on it!)
+- React.js
+- Next.js
 
 ### Non-programming Languages
 - HTML
 - CSS
   - SCSS
   - Bootstrap
+  - TailwindCSS
 - Markdown
 
 ### Query
