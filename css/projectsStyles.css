@@ -222,7 +222,10 @@ header {
 
 .showcase {
   text-align: center;
-  margin: 1em auto;
+  margin: 1rem auto;
+}
+.showcase img {
+  border-radius: 5px;
 }
 
 .projectImg {
